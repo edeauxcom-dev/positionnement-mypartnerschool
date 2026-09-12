@@ -1,0 +1,1788 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<!-- This site is hosted on Netlify. Anyone can build and deploy a site
+     like this one for free: https://netlify.new/?utm_campaign=ai-legible&utm_source=comment&utm_medium=referral&utm_id=0ae1f792-2d58-4cf4-bb36-8c99609bd5fe
+     Netlify hosting facts for this site: static/SSR served via Netlify Edge. -->
+<meta name="hosting-provider" content="Netlify">
+<meta name="netlify-deploy" content="https://netlify.new/?utm_campaign=ai-legible&amp;utm_source=meta&amp;utm_medium=referral&amp;utm_id=0ae1f792-2d58-4cf4-bb36-8c99609bd5fe">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Positionnement Candidat — My Partner School</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Syne:wght@600;700;800&display=swap');
+
+:root {
+  --blue: #1a7bc4;
+  --blue-dark: #115a91;
+  --blue-light: #e8f2fb;
+  --blue-mid: #c5dcf0;
+  --cv: #0ea5e9;
+  --cc: #8b5cf6;
+  --ntc: #f97316;
+  --mem: #10b981;
+  --cv-bg: #e0f4fd;
+  --cc-bg: #f3f0fd;
+  --ntc-bg: #fff3ea;
+  --mem-bg: #e6f9f3;
+  --dark: #0f172a;
+  --gray: #64748b;
+  --gray-light: #e2e8f0;
+  --white: #ffffff;
+  --bg: #f8fafc;
+  --shadow: 0 2px 16px rgba(26,123,196,0.10);
+  --shadow-lg: 0 6px 32px rgba(26,123,196,0.16);
+  --radius: 14px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--dark);
+  min-height: 100vh;
+  padding-bottom: 90px;
+}
+
+/* ===== HEADER ===== */
+.header {
+  background: linear-gradient(135deg, var(--blue-dark) 0%, var(--blue) 60%, #2196c4 100%);
+  padding: 28px 40px 24px;
+  position: relative;
+  overflow: hidden;
+  print-color-adjust: exact;
+  -webkit-print-color-adjust: exact;
+}
+.header::after {
+  content: '';
+  position: absolute;
+  bottom: -60px; right: -60px;
+  width: 220px; height: 220px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 50%;
+  pointer-events: none;
+}
+.header-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  position: relative;
+  z-index: 1;
+}
+.logo-wrap {
+  background: white;
+  border-radius: 10px;
+  padding: 8px 14px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+  flex-shrink: 0;
+}
+.logo-wrap img { height: 44px; display: block; }
+.header-text h1 {
+  font-family: 'Syne', sans-serif;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.15;
+}
+.header-text p {
+  color: rgba(255,255,255,0.78);
+  font-size: 0.82rem;
+  margin-top: 4px;
+  font-weight: 400;
+}
+.header-badge {
+  margin-left: auto;
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.3);
+  color: white;
+  padding: 7px 16px;
+  border-radius: 20px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  white-space: nowrap;
+  letter-spacing: .04em;
+}
+
+/* ===== CONTAINER ===== */
+.container { max-width: 960px; margin: 0 auto; padding: 32px 24px 48px; }
+
+/* ===== CARDS ===== */
+.card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 24px 28px;
+  margin-bottom: 18px;
+  box-shadow: var(--shadow);
+}
+
+/* ===== SECTION TITLES ===== */
+.section-title {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--blue-dark);
+  margin: 28px 0 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.section-title::after {
+  content: '';
+  flex: 1;
+  height: 2px;
+  background: linear-gradient(to right, var(--blue-mid), transparent);
+  border-radius: 2px;
+}
+
+/* ===== INSTRUCTIONS ===== */
+.instructions {
+  background: var(--blue-light);
+  border-left: 4px solid var(--blue);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  padding: 16px 20px;
+  margin-bottom: 20px;
+}
+.instructions h3 {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--blue-dark);
+  text-transform: uppercase;
+  letter-spacing: .07em;
+  margin-bottom: 8px;
+}
+.instructions ol {
+  padding-left: 16px;
+  font-size: 0.83rem;
+  color: var(--gray);
+  line-height: 1.85;
+}
+
+/* ===== FIELDS ===== */
+.fields-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.field-full { grid-column: 1 / -1; }
+.field label {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--gray);
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  margin-bottom: 5px;
+}
+.field input, .field textarea, .field select {
+  width: 100%;
+  border: 1.5px solid var(--gray-light);
+  border-radius: 8px;
+  padding: 9px 13px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.88rem;
+  color: var(--dark);
+  outline: none;
+  background: var(--white);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.field input:focus, .field textarea:focus, .field select:focus {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 3px rgba(26,123,196,0.1);
+}
+.field textarea { resize: vertical; min-height: 60px; }
+
+/* ===== AXE LABEL ===== */
+.axe-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--blue-light);
+  color: var(--blue-dark);
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  padding: 3px 10px;
+  border-radius: 20px;
+  margin-bottom: 14px;
+}
+
+/* ===== QUESTION CARD ===== */
+.q-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  margin-bottom: 14px;
+  box-shadow: var(--shadow);
+  border: 2px solid transparent;
+  transition: border-color .25s, box-shadow .25s;
+}
+.q-card.answered { border-color: var(--blue-mid); box-shadow: var(--shadow-lg); }
+.q-header { display: flex; align-items: flex-start; gap: 14px; margin-bottom: 12px; }
+.q-num {
+  background: linear-gradient(135deg, var(--blue), var(--blue-dark));
+  color: white;
+  width: 34px; height: 34px;
+  border-radius: 9px;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 700; font-size: 0.9rem; flex-shrink: 0;
+  print-color-adjust: exact;
+  -webkit-print-color-adjust: exact;
+}
+.q-text { font-weight: 600; font-size: 0.95rem; color: var(--dark); line-height: 1.4; flex: 1; }
+.q-formule {
+  background: var(--blue-light);
+  border-left: 3px solid var(--blue-mid);
+  border-radius: 0 8px 8px 0;
+  padding: 9px 13px;
+  font-size: 0.8rem;
+  color: var(--gray);
+  font-style: italic;
+  margin-bottom: 14px;
+}
+
+/* ===== CHOICES ===== */
+.choices { display: flex; flex-direction: column; gap: 8px; }
+.choice {
+  display: flex; align-items: flex-start; gap: 12px;
+  padding: 11px 14px;
+  border: 1.5px solid var(--gray-light);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all .18s;
+}
+.choice:hover { border-color: var(--blue-mid); background: var(--blue-light); }
+.choice input[type=radio] { display: none; }
+.choice-radio {
+  width: 18px; height: 18px;
+  border-radius: 50%;
+  border: 2px solid var(--gray-light);
+  flex-shrink: 0;
+  margin-top: 2px;
+  transition: all .18s;
+  display: flex; align-items: center; justify-content: center;
+}
+.choice-radio::after {
+  content: ''; width: 7px; height: 7px;
+  background: white; border-radius: 50%; opacity: 0; transition: opacity .18s;
+}
+.choice input[type=radio]:checked + .choice-radio {
+  background: var(--blue); border-color: var(--blue);
+}
+.choice input[type=radio]:checked + .choice-radio::after { opacity: 1; }
+.choice:has(input:checked) { border-color: var(--blue); background: var(--blue-light); }
+.choice-letter {
+  font-weight: 700; color: var(--blue-dark); font-size: 0.82rem;
+  min-width: 18px; margin-top: 1px;
+}
+.choice-text { flex: 1; font-size: 0.87rem; color: var(--dark); line-height: 1.45; }
+.choice-tags {
+  display: flex; gap: 4px; flex-wrap: wrap; align-self: center;
+}
+.ttag {
+  font-size: 0.68rem; font-weight: 700;
+  padding: 2px 7px; border-radius: 5px;
+  white-space: nowrap;
+  print-color-adjust: exact;
+  -webkit-print-color-adjust: exact;
+}
+.ttag-cv { background: var(--cv-bg); color: var(--cv); }
+.ttag-cc { background: var(--cc-bg); color: var(--cc); }
+.ttag-ntc { background: var(--ntc-bg); color: var(--ntc); }
+.ttag-mem { background: var(--mem-bg); color: var(--mem); }
+
+.q-note { margin-top: 12px; }
+.q-note label {
+  font-size: 0.72rem; font-weight: 600; color: var(--gray);
+  text-transform: uppercase; letter-spacing: .05em; display: block; margin-bottom: 5px;
+}
+.q-note textarea {
+  width: 100%; border: 1.5px solid var(--gray-light); border-radius: 8px;
+  padding: 8px 12px; font-family: 'Inter', sans-serif; font-size: 0.85rem;
+  resize: vertical; min-height: 58px; outline: none;
+  transition: border-color .2s;
+}
+.q-note textarea:focus { border-color: var(--blue); box-shadow: 0 0 0 3px rgba(26,123,196,0.1); }
+
+/* ===== LIVE SCORES ===== */
+.live-scores {
+  background: linear-gradient(135deg, var(--blue-dark), var(--blue));
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  margin: 24px 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  print-color-adjust: exact;
+  -webkit-print-color-adjust: exact;
+}
+.ls-item {
+  background: rgba(255,255,255,0.12);
+  border-radius: 10px;
+  padding: 12px 10px;
+  text-align: center;
+}
+.ls-item .ls-label {
+  font-size: 0.7rem; font-weight: 700; letter-spacing: .06em;
+  text-transform: uppercase; color: rgba(255,255,255,0.75);
+  margin-bottom: 6px;
+}
+.ls-item .ls-val {
+  font-family: 'Syne', sans-serif; font-size: 1.6rem;
+  font-weight: 800; color: white; line-height: 1;
+}
+.ls-item .ls-bar-wrap {
+  height: 5px; background: rgba(255,255,255,0.2);
+  border-radius: 3px; margin-top: 8px; overflow: hidden;
+}
+.ls-item .ls-bar { height: 100%; border-radius: 3px; transition: width .4s ease; }
+.ls-bar-cv { background: var(--cv); }
+.ls-bar-cc { background: #a78bfa; }
+.ls-bar-ntc { background: #fb923c; }
+.ls-bar-mem { background: var(--mem); }
+
+/* ===== RESULTAT ===== */
+.result-section {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 28px;
+  margin-bottom: 18px;
+  box-shadow: var(--shadow-lg);
+}
+.result-header {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.1rem; font-weight: 700;
+  color: var(--blue-dark);
+  margin-bottom: 18px;
+  display: flex; align-items: center; gap: 10px;
+}
+.result-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 20px; }
+.result-card {
+  border-radius: 12px;
+  padding: 18px 16px;
+  border: 2px solid var(--gray-light);
+  transition: all .3s;
+}
+.result-card.active { box-shadow: 0 4px 20px rgba(0,0,0,0.1); transform: translateY(-2px); }
+.result-card .rc-label {
+  font-size: 0.68rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: .07em; margin-bottom: 6px;
+}
+.result-card .rc-titre {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.1rem; font-weight: 800; margin-bottom: 4px;
+}
+.result-card .rc-rncp {
+  font-size: 0.72rem; color: var(--gray); margin-bottom: 10px;
+}
+.result-card .rc-score {
+  font-size: 1.4rem; font-weight: 700; font-family: 'Syne', sans-serif;
+}
+.result-card .rc-bar-wrap {
+  height: 6px; background: var(--gray-light);
+  border-radius: 3px; margin-top: 8px; overflow: hidden;
+}
+.result-card .rc-bar { height: 100%; border-radius: 3px; transition: width .5s; }
+.result-card .rc-desc {
+  font-size: 0.8rem; color: var(--gray); line-height: 1.5; margin-top: 8px;
+}
+
+/* CV */
+.rc-cv { --c: var(--cv); --cbg: var(--cv-bg); }
+.rc-cv.active { border-color: var(--cv); background: var(--cv-bg); }
+.rc-cv .rc-label { color: var(--cv); }
+.rc-cv .rc-titre { color: var(--cv); }
+.rc-cv .rc-score { color: var(--cv); }
+.rc-cv .rc-bar { background: var(--cv); }
+
+/* CC */
+.rc-cc { --c: var(--cc); --cbg: var(--cc-bg); }
+.rc-cc.active { border-color: var(--cc); background: var(--cc-bg); }
+.rc-cc .rc-label { color: var(--cc); }
+.rc-cc .rc-titre { color: var(--cc); }
+.rc-cc .rc-score { color: var(--cc); }
+.rc-cc .rc-bar { background: var(--cc); }
+
+/* NTC */
+.rc-ntc { --c: var(--ntc); --cbg: var(--ntc-bg); }
+.rc-ntc.active { border-color: var(--ntc); background: var(--ntc-bg); }
+.rc-ntc .rc-label { color: var(--ntc); }
+.rc-ntc .rc-titre { color: var(--ntc); }
+.rc-ntc .rc-score { color: var(--ntc); }
+.rc-ntc .rc-bar { background: var(--ntc); }
+
+/* MEM */
+.rc-mem { --c: var(--mem); --cbg: var(--mem-bg); }
+.rc-mem.active { border-color: var(--mem); background: var(--mem-bg); }
+.rc-mem .rc-label { color: var(--mem); }
+.rc-mem .rc-titre { color: var(--mem); }
+.rc-mem .rc-score { color: var(--mem); }
+.rc-mem .rc-bar { background: var(--mem); }
+
+/* ===== ALERTES ===== */
+.alerts { margin-top: 14px; display: flex; flex-direction: column; gap: 8px; }
+.alert {
+  display: flex; align-items: flex-start; gap: 10px;
+  padding: 10px 14px; border-radius: 9px;
+  font-size: 0.83rem; line-height: 1.45;
+}
+.alert-warn { background: #fff7ed; border: 1px solid #fed7aa; color: #9a3412; }
+.alert-info { background: var(--blue-light); border: 1px solid var(--blue-mid); color: var(--blue-dark); }
+.alert-ok { background: #f0fdf4; border: 1px solid #bbf7d0; color: #14532d; }
+
+/* ===== SYNTHESE ===== */
+.suite-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 12px; }
+.suite-label {
+  display: flex; align-items: center; gap: 10px;
+  padding: 10px 14px;
+  border: 1.5px solid var(--gray-light);
+  border-radius: 10px;
+  cursor: pointer; font-size: 0.87rem;
+  transition: all .2s;
+}
+.suite-label:hover { border-color: var(--blue-mid); background: var(--blue-light); }
+.suite-label input { display: none; }
+.suite-label:has(input:checked) {
+  border-color: var(--blue); background: var(--blue-light);
+  font-weight: 600; color: var(--blue-dark);
+}
+.suite-dot {
+  width: 14px; height: 14px; border-radius: 3px;
+  border: 2px solid var(--gray-light); flex-shrink: 0; transition: all .2s;
+}
+.suite-label:has(input:checked) .suite-dot { background: var(--blue); border-color: var(--blue); }
+
+/* ===== SIGNATURE ===== */
+.sig-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px; }
+.sig-box {
+  border: 1.5px dashed var(--blue-mid);
+  border-radius: var(--radius);
+  padding: 16px;
+  text-align: center;
+}
+.sig-box label {
+  font-size: 0.72rem; font-weight: 700; color: var(--gray);
+  text-transform: uppercase; letter-spacing: .06em;
+  display: block; margin-bottom: 4px;
+}
+.sig-box p { font-size: 0.75rem; color: var(--gray); font-style: italic; margin-bottom: 10px; }
+.sig-canvas-wrap {
+  position: relative; border: 2px solid var(--blue-mid);
+  border-radius: 8px; background: white; overflow: hidden; cursor: crosshair;
+}
+.sig-canvas-wrap canvas { display: block; width: 100%; height: 100px; touch-action: none; }
+.sig-ph {
+  position: absolute; inset: 0;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.8rem; color: var(--blue-mid); font-style: italic;
+  pointer-events: none; transition: opacity .2s;
+}
+.sig-actions {
+  display: flex; gap: 6px; margin-top: 8px;
+  justify-content: center; flex-wrap: wrap;
+}
+.sig-btn {
+  font-family: 'Inter', sans-serif; font-size: 0.72rem; font-weight: 600;
+  padding: 5px 11px; border-radius: 7px;
+  border: 1.5px solid var(--blue-mid); background: var(--blue-light);
+  color: var(--blue-dark); cursor: pointer; transition: all .15s;
+}
+.sig-btn:hover { background: var(--blue-mid); }
+.sig-date { font-size: 0.75rem; color: var(--gray); margin-top: 7px; font-weight: 500; }
+input.sig-file { display: none; }
+
+/* ===== PROGRESSION ===== */
+.progress-bar-outer {
+  background: var(--gray-light); border-radius: 5px;
+  height: 8px; margin-bottom: 6px; overflow: hidden;
+}
+.progress-bar-inner {
+  height: 100%;
+  background: linear-gradient(90deg, var(--blue), var(--blue-dark));
+  border-radius: 5px; transition: width .4s;
+  print-color-adjust: exact;
+  -webkit-print-color-adjust: exact;
+}
+.progress-label {
+  font-size: 0.75rem; color: var(--gray); font-weight: 500;
+  text-align: right; margin-bottom: 20px;
+}
+
+/* ===== ACTION BAR ===== */
+.action-bar {
+  position: fixed; bottom: 0; left: 0; right: 0;
+  background: rgba(255,255,255,0.96);
+  backdrop-filter: blur(8px);
+  border-top: 1px solid var(--blue-mid);
+  padding: 12px 24px;
+  display: flex; justify-content: center; gap: 12px;
+  z-index: 100;
+  box-shadow: 0 -3px 16px rgba(26,123,196,0.1);
+}
+.btn {
+  display: inline-flex; align-items: center; gap: 7px;
+  padding: 10px 20px; border-radius: 9px;
+  font-family: 'Inter', sans-serif; font-size: 0.87rem; font-weight: 600;
+  cursor: pointer; border: none; transition: all .18s;
+}
+.btn-primary { background: linear-gradient(135deg, var(--blue), var(--blue-dark)); color: white; box-shadow: 0 3px 12px rgba(26,123,196,0.3); }
+.btn-primary:hover { transform: translateY(-1px); box-shadow: 0 5px 16px rgba(26,123,196,0.4); }
+.btn-secondary { background: var(--blue-light); color: var(--blue-dark); border: 1.5px solid var(--blue-mid); }
+.btn-secondary:hover { background: var(--blue-mid); }
+.btn-ghost { background: transparent; color: var(--gray); border: 1.5px solid var(--gray-light); }
+.btn-ghost:hover { background: var(--gray-light); color: var(--dark); }
+
+/* ===== FOOTER ===== */
+.doc-footer {
+  text-align: center; font-size: 0.73rem; color: var(--gray);
+  margin-top: 30px; padding-top: 14px;
+  border-top: 1px solid var(--gray-light); font-style: italic;
+}
+
+
+
+/* ===== BANNIÈRE ADMISSION ===== */
+.admission-banner {
+  background: linear-gradient(135deg, var(--blue-dark), var(--blue));
+  border-radius: var(--radius);
+  padding: 18px 24px;
+  margin-bottom: 8px;
+}
+.admission-banner-title {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+  letter-spacing: normal;
+  text-transform: none;
+  line-height: 1.15;
+}
+.admission-banner-sub {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.8);
+  margin-top: 5px;
+  font-weight: 400;
+  letter-spacing: .02em;
+}
+
+/* ===== BLOC TITRE ===== */
+.bloc-titre {
+  font-family: 'Syne', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--blue-dark);
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--blue-light);
+}
+.req { color: #e11d48; font-weight: 700; }
+.radio-inline {
+  display: flex; align-items: center; gap: 6px;
+  font-size: 0.88rem; cursor: pointer; color: var(--dark);
+}
+.radio-inline input { accent-color: var(--blue); width: 16px; height: 16px; }
+
+/* ===== PRINT ===== */
+@media print {
+  .action-bar { display: none; }
+  .header { display: none; }
+  body { background: white; }
+  .container { padding: 0 16px; }
+  .q-card, .card, .result-section { box-shadow: none; border: 1px solid var(--gray-light); break-inside: avoid; }
+  .live-scores { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-inner">
+    <div class="logo-wrap">
+      <img src="data:image/jpeg;base64,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" alt="My Partner School">
+    </div>
+    <div class="header-text">
+      <h1>Test de Positionnement Candidat</h1>
+      <p>Outil d'orientation vers les Titres Professionnels · CC · CV · NTC · MEM · CFA My Partner School</p>
+    </div>
+    <div class="header-badge">Entretien d'admission</div>
+  </div>
+</div>
+
+<div class="container">
+
+  <div class="instructions">
+    <h3>📋 Mode d'emploi du test</h3>
+    <p style="background:#fff8f0;border:1.5px solid #fed7aa;border-radius:8px;padding:10px 14px;margin-bottom:12px;color:#9a3412;font-size:0.88rem;">
+      ⚠️ <strong>Le candidat ne doit pas et ne peut pas remplir ce test seul.</strong> Il doit être guidé question par question par l'interviewer, à l'oral. Sans cet accompagnement, le test ne répond pas à l'obligation réglementaire de positionnement à l'entrée en formation.
+    </p>
+    <ol>
+      <li>Poser chaque question à l'oral dans l'ordre indiqué — ne pas lire les titres des titres au candidat, ni les tags de couleur.</li>
+      <li>Cocher la réponse qui correspond le mieux à ce qu'exprime le candidat. Si hésitation entre deux, cocher la plus proche.</li>
+      <li>Le scoring s'actualise automatiquement. Les résultats apparaissent après la question 20.</li>
+      <li>L'outil propose un <strong>titre principal</strong> et un <strong>titre secondaire</strong> avec des alertes si le profil est atypique.</li>
+      <li>La recommandation est un <em>point de départ</em> : l'interviewer conserve le jugement final.</li>
+    </ol>
+  </div>
+
+  <!-- FICHE CANDIDAT -->
+  <div class="admission-banner" style="print-color-adjust:exact;-webkit-print-color-adjust:exact;">
+    <div class="admission-banner-title">Fiche d'admission et de positionnement</div>
+    <div class="admission-banner-sub">
+    Document confidentiel · My Partner School CFA · À conserver dans le dossier apprenant
+    <span style="display:inline-flex;gap:6px;margin-left:10px;flex-wrap:wrap;vertical-align:middle;">
+      <span style="background:rgba(255,255,255,0.22);border:1px solid rgba(255,255,255,0.4);color:white;font-size:0.7rem;font-weight:700;padding:2px 9px;border-radius:12px;letter-spacing:.03em;white-space:nowrap;" title="Analyse du besoin du bénéficiaire en lien avec l'entreprise">✓ Ind. 4 — Analyse du besoin</span>
+      <span style="background:rgba(255,255,255,0.22);border:1px solid rgba(255,255,255,0.4);color:white;font-size:0.7rem;font-weight:700;padding:2px 9px;border-radius:12px;letter-spacing:.03em;white-space:nowrap;" title="Positionnement du bénéficiaire en entrée de formation">✓ Ind. 8 — Positionnement</span>
+      <span style="background:rgba(255,255,255,0.22);border:1px solid rgba(255,255,255,0.4);color:white;font-size:0.7rem;font-weight:700;padding:2px 9px;border-radius:12px;letter-spacing:.03em;white-space:nowrap;" title="Coordination pédagogique entre CFA et entreprise — spécifique apprentissage">✓ Ind. 13 — Coordination alternance</span>
+    </span>
+  </div>
+  </div>
+
+  <div class="card" style="margin-bottom:10px;background:var(--blue-light);">
+    <div style="font-size:0.72rem;font-weight:700;color:var(--gray);text-transform:uppercase;letter-spacing:.05em;margin-bottom:8px;">Formulaire rempli par <span class="req">*</span></div>
+    <div style="display:flex;gap:16px;">
+      <label class="radio-inline"><input type="radio" name="rempli-par" value="candidat" checked> Le candidat lui-même</label>
+      <label class="radio-inline"><input type="radio" name="rempli-par" value="conseillere"> La conseillère (entretien)</label>
+    </div>
+  </div>
+
+  <!-- BLOC 1 : IDENTITÉ CIVILE -->
+  <div class="card" style="margin-bottom:10px;">
+    <div class="bloc-titre">👤 Identité civile de l'apprenant(e)</div>
+    <div class="fields-grid">
+      <div class="field"><label>Nom de naissance <span class="req">*</span></label><input type="text" id="f-nom-naissance" placeholder="ex. DUPONT" style="text-transform:uppercase"></div>
+      <div class="field"><label>Nom d'usage (si différent)</label><input type="text" id="f-nom-usage" placeholder="ex. MARTIN"></div>
+      <div class="field"><label>Premier prénom (état civil) <span class="req">*</span></label><input type="text" id="f-prenom" placeholder="ex. Jean"></div>
+      <div class="field"><label>Autres prénoms</label><input type="text" id="f-autres-prenoms" placeholder="ex. Paul, Marc"></div>
+      <div class="field"><label>Date de naissance <span class="req">*</span></label><input type="date" id="f-ddn" onchange="calculerAge()"></div>
+      <div class="field"><label>Âge <span style="font-weight:400;color:var(--gray);font-size:0.75rem;">(calculé automatiquement)</span></label><input type="text" id="f-age" readonly style="background:#f3f4f6;color:var(--gray);cursor:not-allowed;"></div>
+      <div class="field"><label>Sexe <span class="req">*</span></label>
+        <select id="f-sexe">
+          <option value="">-- Sélectionner --</option>
+          <option value="M">Masculin</option>
+          <option value="F">Féminin</option>
+        </select>
+      </div>
+      <div class="field"><label>Département de naissance <span class="req">*</span></label><input type="text" id="f-dep-naissance" placeholder="ex. 13 ou 2B" maxlength="3"></div>
+      <div class="field"><label>Commune de naissance <span class="req">*</span></label><input type="text" id="f-commune-naissance" placeholder="ex. MARSEILLE"></div>
+      <div class="field"><label>Nationalité</label>
+        <select id="f-nationalite">
+          <option value="1">Française (1)</option>
+          <option value="2">Union Européenne (2)</option>
+          <option value="3">Hors UE (3)</option>
+        </select>
+      </div>
+      <div class="field"><label>NIR — N° de Sécurité Sociale <span class="req">*</span></label><input type="text" id="f-nir" placeholder="ex. 1 05 13 xxx xxx xx" maxlength="21"></div>
+    </div>
+    <!-- Déclarations réglementaires -->
+    <div style="margin-top:14px;display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+      <div style="background:var(--blue-light);border-radius:9px;padding:12px 14px;">
+        <div style="font-size:0.72rem;font-weight:700;color:var(--gray);text-transform:uppercase;letter-spacing:.05em;margin-bottom:8px;">Sportif de haut niveau</div>
+        <div style="display:flex;gap:16px;">
+          <label class="radio-inline"><input type="radio" name="shn" value="oui"> Oui</label>
+          <label class="radio-inline"><input type="radio" name="shn" value="non" checked> Non</label>
+        </div>
+      </div>
+      <div style="background:var(--blue-light);border-radius:9px;padding:12px 14px;">
+        <div style="font-size:0.72rem;font-weight:700;color:var(--gray);text-transform:uppercase;letter-spacing:.05em;margin-bottom:8px;">Reconnaissance travailleur handicapé (RQTH)</div>
+        <div style="display:flex;gap:16px;">
+          <label class="radio-inline"><input type="radio" name="rqth" value="oui"> Oui</label>
+          <label class="radio-inline"><input type="radio" name="rqth" value="non" checked> Non</label>
+        </div>
+      </div>
+    </div>
+    <!-- Représentant légal si mineur -->
+    <div style="margin-top:14px;padding:14px;background:#fff8f0;border:1.5px dashed #fed7aa;border-radius:9px;">
+      <div style="font-size:0.75rem;font-weight:700;color:#9a3412;text-transform:uppercase;letter-spacing:.05em;margin-bottom:10px;">👨‍👩‍👦 Représentant légal (à renseigner si l'apprenti(e) est mineur·e non émancipé·e)</div>
+      <div class="fields-grid">
+        <div class="field"><label>Nom et prénom du représentant légal</label><input type="text" id="f-rl-nom" placeholder="ex. DUPONT Marie"></div>
+        <div class="field"><label>Lien de parenté</label><input type="text" id="f-rl-lien" placeholder="ex. Mère, Père, Tuteur"></div>
+        <div class="field"><label>Adresse du représentant légal</label><input type="text" id="f-rl-adresse" placeholder="N°, voie"></div>
+        <div class="field"><label>Code postal / Commune</label><input type="text" id="f-rl-cp-ville" placeholder="ex. 13000 Marseille"></div>
+        <div class="field field-full"><label>Email du représentant légal</label><input type="email" id="f-rl-email" placeholder="email@exemple.com"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BLOC 2 : COORDONNÉES -->
+  <div class="card" style="margin-bottom:10px;">
+    <div class="bloc-titre">📍 Coordonnées de l'apprenant(e)</div>
+    <div class="fields-grid">
+      <div class="field"><label>N° et voie <span class="req">*</span></label><input type="text" id="f-adresse" placeholder="ex. 235 Bd Victor Joly"></div>
+      <div class="field"><label>Complément d'adresse</label><input type="text" id="f-complement" placeholder="Bâtiment, étage, appt…"></div>
+      <div class="field"><label>Code postal <span class="req">*</span></label><input type="text" id="f-cp" placeholder="ex. 13300" maxlength="5"></div>
+      <div class="field"><label>Commune <span class="req">*</span></label><input type="text" id="f-ville" placeholder="ex. Salon-de-Provence"></div>
+      <div class="field"><label>Téléphone <span class="req">*</span></label><input type="tel" id="f-tel" placeholder="06 xx xx xx xx"></div>
+      <div class="field"><label>Email <span class="req">*</span></label><input type="email" id="f-email" placeholder="candidat@email.com"></div>
+    </div>
+  </div>
+
+  <!-- BLOC 3 : PARCOURS SCOLAIRE ET PROFESSIONNEL -->
+  <div class="card" style="margin-bottom:10px;">
+    <div class="bloc-titre">🎓 Parcours scolaire & professionnel</div>
+    <div class="fields-grid">
+      <div class="field"><label>Dernière classe / année suivie</label>
+        <select id="f-derniere-classe">
+          <option value="">-- Sélectionner --</option>
+          <option value="01">01 — Terminale générale / technologique</option>
+          <option value="02">02 — Terminale professionnelle</option>
+          <option value="03">03 — Terminale CAP</option>
+          <option value="11">11 — 1ère année BTS / BUT / Licence</option>
+          <option value="12">12 — 2ème année BTS / DUT</option>
+          <option value="20">20 — Autre formation post-bac</option>
+          <option value="99">99 — Autre</option>
+        </select>
+      </div>
+      <div class="field"><label>Dernier diplôme ou titre préparé</label>
+        <select id="f-dernier-diplome">
+          <option value="">-- Sélectionner --</option>
+          <option value="10">10 — Aucun diplôme</option>
+          <option value="11">11 — BEPC / DNB</option>
+          <option value="30">30 — CAP / BEP</option>
+          <option value="33">33 — CAP spécialité (ex. Méca, Coiffure…)</option>
+          <option value="40">40 — Baccalauréat général</option>
+          <option value="41">41 — Baccalauréat technologique</option>
+          <option value="42">42 — Baccalauréat professionnel</option>
+          <option value="46">46 — BTS / DUT</option>
+          <option value="49">49 — Bac+3 et plus</option>
+        </select>
+      </div>
+      <div class="field field-full"><label>Intitulé précis du dernier diplôme ou titre préparé</label><input type="text" id="f-intitule-diplome" placeholder="ex. CAP Mécanique Moto, Bac STMG, BTS Commerce…"></div>
+      <div class="field"><label>Diplôme le plus élevé obtenu</label>
+        <select id="f-diplome-obtenu">
+          <option value="">-- Sélectionner --</option>
+          <option value="0">Aucun diplôme</option>
+          <option value="1">BEPC / Brevet</option>
+          <option value="2">CAP / BEP</option>
+          <option value="3">Baccalauréat</option>
+          <option value="4">BTS / DUT / Bac+2</option>
+          <option value="5">Licence / Bac+3</option>
+          <option value="6">Master / Bac+5 et plus</option>
+        </select>
+      </div>
+      <div class="field"><label>Situation avant ce contrat</label>
+        <select id="f-situation-avant">
+          <option value="">-- Sélectionner --</option>
+          <option value="01">01 — Scolaire</option>
+          <option value="02">02 — Étudiant</option>
+          <option value="03">03 — Stagiaire de la formation professionnelle</option>
+          <option value="04">04 — Apprenti</option>
+          <option value="05">05 — Salarié</option>
+          <option value="06">06 — À la recherche d'emploi</option>
+          <option value="07">07 — Inactif</option>
+          <option value="10">10 — Autre</option>
+        </select>
+      </div>
+      <div class="field"><label>Projet de création / reprise d'entreprise</label>
+        <select id="f-projet-creation">
+          <option value="non">Non</option>
+          <option value="oui">Oui</option>
+        </select>
+      </div>
+      <div class="field field-full"><label>Expériences professionnelles (résumé libre)</label><textarea id="f-exp" placeholder="Stages, emplois, alternances précédentes, activités associatives ou bénévoles significatives…"></textarea></div>
+    </div>
+  </div>
+
+  <!-- BLOC 4 : TITRE VISÉ & FORMATION -->
+  <div class="card" style="margin-bottom:10px;">
+    <div class="bloc-titre">📚 Titre professionnel visé & formation</div>
+    <div class="fields-grid">
+      <div class="field"><label>Titre professionnel visé <span class="req">*</span></label>
+        <select id="f-titre-vise">
+          <option value="">-- À compléter après positionnement --</option>
+          <option value="CV">CV — Conseiller de Vente · RNCP 37098 · Niveau 4</option>
+          <option value="CC">CC — Conseiller Commercial · RNCP 37717 · Niveau 4</option>
+          <option value="NTC">NTC — Négociateur Technico-Commercial · RNCP 39063 · Niveau 5</option>
+          <option value="MEM">MEM — Manager d'Établissement Marchand · RNCP 38676 · Niveau 5</option>
+        </select>
+      </div>
+      <div class="field"><label>Entrée en formation souhaitée</label>
+        <select id="f-entree">
+          <option value="">-- Sélectionner --</option>
+          <option>Septembre 2026</option>
+          <option>Janvier 2027</option>
+          <option>Avril 2027</option>
+        </select>
+      </div>
+      <div class="field"><label>Date de début de formation au CFA <span style="font-weight:400;color:var(--gray);font-size:0.75rem;">(indépendant de l'entreprise)</span></label><input type="date" id="f-formation-debut-cfa"></div>
+      <div class="field"><label>Date de l'entretien <span class="req">*</span></label><input type="date" id="f-date"></div>
+      <div class="field"><label>Entretien conduit par</label><input type="text" id="f-conseiller" placeholder="Nom de l'interviewer"></div>
+    </div>
+    <div style="margin-top:14px;background:var(--blue-light);border-radius:9px;padding:12px 14px;">
+      <div style="font-size:0.72rem;font-weight:700;color:var(--gray);text-transform:uppercase;letter-spacing:.05em;margin-bottom:8px;">💻 Besoin d'un ordinateur pour la formation <span style="font-weight:400;text-transform:none;letter-spacing:normal;">(indépendant du statut employeur — sert à la demande de financement OPCO du 1er équipement)</span></div>
+      <div style="display:flex;gap:16px;">
+        <label class="radio-inline"><input type="radio" name="besoin-ordi" value="oui"> Oui</label>
+        <label class="radio-inline"><input type="radio" name="besoin-ordi" value="non" checked> Non</label>
+      </div>
+    </div>
+  </div>
+
+  <!-- BLOC 5 : EMPLOYEUR (si contrat connu) -->
+  <div class="card" style="margin-bottom:10px;">
+    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;margin-bottom:14px;">
+      <div class="bloc-titre" style="margin-bottom:0;">🏢 Employeur / Entreprise d'accueil</div>
+      <div style="display:flex;align-items:center;gap:18px;flex-wrap:wrap;">
+        <label style="display:flex;align-items:center;gap:8px;font-size:0.82rem;color:var(--gray);cursor:pointer;">
+          <input type="checkbox" id="toggle-employeur" onchange="toggleBloc('bloc-employeur',this.checked)" style="width:16px;height:16px;accent-color:var(--blue)">
+          Contrat déjà identifié
+        </label>
+        <label style="display:flex;align-items:center;gap:8px;font-size:0.82rem;color:var(--gray);white-space:nowrap;">
+          Date de début en entreprise
+          <input type="date" id="f-formation-debut-entreprise" style="padding:6px 10px;border:1.5px solid var(--gray-light);border-radius:6px;font-family:'Inter',sans-serif;font-size:0.82rem;">
+        </label>
+      </div>
+    </div>
+    <div id="bloc-employeur" style="display:none;">
+      <div class="fields-grid">
+        <div class="field field-full"><label>Raison sociale / Nom de l'employeur</label><input type="text" id="f-emp-nom" placeholder="ex. XO Sports Salon"></div>
+        <div class="field"><label>N° SIRET</label><input type="text" id="f-emp-siret" placeholder="14 chiffres" maxlength="14"></div>
+        <div class="field"><label>Code NAF / APE</label><input type="text" id="f-emp-naf" placeholder="ex. 4764Z" maxlength="5"></div>
+        <div class="field"><label>N° et voie</label><input type="text" id="f-emp-adresse" placeholder="N°, voie"></div>
+        <div class="field"><label>Code postal / Commune</label><input type="text" id="f-emp-cp-ville" placeholder="ex. 13800 Salon-de-Provence"></div>
+        <div class="field"><label>Téléphone</label><input type="tel" id="f-emp-tel" placeholder="04 xx xx xx xx"></div>
+        <div class="field"><label>Email</label><input type="email" id="f-emp-email" placeholder="contact@entreprise.fr"></div>
+        <div class="field"><label>Effectif total salariés</label><input type="number" id="f-emp-effectif" placeholder="ex. 25" min="1"></div>
+        <div class="field"><label>Type d'employeur <span class="req">*</span></label>
+          <select id="f-emp-type">
+            <option value="">-- Sélectionner --</option>
+            <option value="prive">Privé</option>
+            <option value="public">Public</option>
+          </select>
+        </div>
+        <div class="field"><label>Cas particulier <span class="req">*</span></label>
+          <select id="f-emp-cas-particulier">
+            <option value="0">Aucun de ces cas</option>
+            <option value="1">Entreprise de travail temporaire</option>
+            <option value="2">Groupement d'employeurs</option>
+            <option value="3">Employeur saisonnier</option>
+            <option value="4">Apprentissage familial</option>
+          </select>
+        </div>
+        <div class="field"><label>Code IDCC <span class="req">*</span> <span style="font-weight:400;color:var(--gray);font-size:0.75rem;">(4 chiffres — remplace l'ancien champ "convention collective")</span></label><input type="text" id="f-emp-idcc" placeholder="ex. 1483" maxlength="4"></div>
+        <div class="field field-full"><label>Nom / Prénom du Maître d'apprentissage</label><input type="text" id="f-mda-nom" placeholder="ex. ROBSON Karleen"></div>
+        <div class="field"><label>Emploi occupé par le maître d'apprentissage</label><input type="text" id="f-mda-emploi" placeholder="ex. Responsable, Gérant…"></div>
+        <div class="field"><label>Email du maître d'apprentissage</label><input type="email" id="f-mda-email" placeholder="mda@entreprise.fr"></div>
+        <div class="field"><label>Date de naissance du Maître d'apprentissage</label><input type="date" id="f-mda-ddn"></div>
+        <div class="field field-full"><label>Diplôme du Maître d'apprentissage <span style="font-weight:400;color:var(--gray);font-size:0.75rem;">(intitulé en clair, ex. BTS Management Commercial)</span></label><input type="text" id="f-mda-diplome" placeholder="ex. BTS Management Commercial des Unités Commerciales"></div>
+        <div class="field"><label>Diplôme le plus élevé obtenu — code <span style="font-weight:400;color:var(--gray);font-size:0.75rem;">(MDA)</span></label>
+          <select id="f-mda-diplome-code">
+            <option value="">-- Sélectionner --</option>
+            <option value="0">Aucun diplôme</option>
+            <option value="1">BEPC / Brevet</option>
+            <option value="2">CAP / BEP</option>
+            <option value="3">Baccalauréat</option>
+            <option value="4">BTS / DUT / Bac+2</option>
+            <option value="5">Licence / Bac+3</option>
+            <option value="6">Master / Bac+5 et plus</option>
+          </select>
+        </div>
+        <div class="field"><label>Niveau de ce diplôme <span style="font-weight:400;color:var(--gray);font-size:0.75rem;">(selon le portail de dépôt utilisé)</span></label>
+          <select id="f-mda-diplome-niveau">
+            <option value="">-- Sélectionner --</option>
+            <option value="sans-niveau">Sans niveau spécifique</option>
+            <option value="3">Niveau 3</option>
+            <option value="4">Niveau 4</option>
+            <option value="5">Niveau 5</option>
+            <option value="6">Niveau 6</option>
+            <option value="7">Niveau 7</option>
+            <option value="8">Niveau 8</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div id="bloc-employeur-vide" style="padding:12px 0;font-size:0.82rem;color:var(--gray);font-style:italic;">
+      ☑️ Cocher la case ci-dessus si un employeur est déjà identifié au moment de l'entretien.
+    </div>
+  </div>
+
+  <!-- PROGRESSION -->
+  <div class="progress-bar-outer"><div class="progress-bar-inner" id="prog-bar" style="width:0%"></div></div>
+  <div class="progress-label" id="prog-label">0 / 20 questions répondues</div>
+
+  <!-- ===== AXE 1 : RAPPORT AUX GENS & À L'AMBIANCE DE TRAVAIL ===== -->
+  <div class="section-title">🧩 Axe 1 — Rapport aux gens & ambiance de travail</div>
+
+  <div class="q-card" id="qc1">
+    <div class="axe-label">🧩 Axe 1</div>
+    <div class="q-header"><div class="q-num">1</div><div class="q-text">Dans quel type d'environnement de travail vous sentez-vous le plus à l'aise ?</div></div>
+    <div class="q-formule">💬 <em>« Imaginez votre journée de travail idéale — où vous trouvez-vous et avec qui ? »</em></div>
+    <div class="choices">
+      <label class="choice"><input type="radio" name="q1" value="A" onchange="pick(1,'A',{cv:3,cc:1,ntc:0,mem:1})"><span class="choice-radio"></span><span class="choice-letter">A</span><span class="choice-text">Dans un magasin, un point de vente, face aux clients qui entrent et sortent toute la journée.</span><div class="choice-tags"><span class="ttag ttag-cv">CV</span></div></label>
+      <label class="choice"><input type="radio" name="q1" value="B" onchange="pick(1,'B',{cv:0,cc:3,ntc:1,mem:0})"><span class="choice-radio"></span><span class="choice-letter">B</span><span class="choice-text">En déplacement, à aller rencontrer des prospects ou clients sur leur terrain.</span><div class="choice-tags"><span class="ttag ttag-cc">CC</span><span class="ttag ttag-ntc">NTC</span></div></label>
+      <label class="choice"><input type="radio" name="q1" value="C" onchange="pick(1,'C',{cv:0,cc:0,ntc:3,mem:1})"><span class="choice-radio"></span><span class="choice-letter">C</span><span class="choice-text">Dans des réunions professionnelles, à négocier des solutions techniques ou des contrats.</span><div class="choice-tags"><span class="ttag ttag-ntc">NTC</span></div></label>
+      <label class="choice"><input type="radio" name="q1" value="D" onchange="pick(1,'D',{cv:1,cc:0,ntc:0,mem:3})"><span class="choice-radio"></span><span class="choice-letter">D</span><span class="choice-text">À organiser et animer une équipe, entre backoffice, terrain et management.</span><div class="choice-tags"><span class="ttag ttag-mem">MEM</span></div></label>
+    </div>
+  </div>
+
+  <div class="q-card" id="qc2">
+    <div class="axe-label">🧩 Axe 1</div>
+    <div class="q-header"><div class="q-num">2</div><div class="q-text">Avec quel type d'interlocuteur préférez-vous travailler au quotidien ?</div></div>
+    <div class="q-formule">💬 <em>« À qui vous adressez-vous dans votre travail idéal — quel est votre interlocuteur principal ? »</em></div>
+    <div class="choices">
+      <label class="choice"><input type="radio" name="q2" value="A" onchange="pick(2,'A',{cv:3,cc:2,ntc:0,mem:0})"><span class="choice-radio"></span><span class="choice-letter">A</span><span class="choice-text">Des particuliers, des clients individuels que j'accompagne dans leurs achats.</span><div class="choice-tags"><span class="ttag ttag-cv">CV</span><span class="ttag ttag-cc">CC</span></div></label>
+      <label class="choice"><input type="radio" name="q2" value="B" onchange="pick(2,'B',{cv:0,cc:1,ntc:3,mem:0})"><span class="choice-radio"></span><span class="choice-letter">B</span><span class="choice-text">Des décideurs ou acheteurs en entreprise, des professionnels avec qui je construis des partenariats.</span><div class="choice-tags"><span class="ttag ttag-ntc">NTC</span></div></label>
+      <label class="choice"><input type="radio" name="q2" value="C" onchange="pick(2,'C',{cv:0,cc:0,ntc:0,mem:3})"><span class="choice-radio"></span><span class="choice-letter">C</span><span class="choice-text">Une équipe que je dirige, des collaborateurs dont je coordonne le travail.</span><div class="choice-tags"><span class="ttag ttag-mem">MEM</span></div></label>
+      <label class="choice"><input type="radio" name="q2" value="D" onchange="pick(2,'D',{cv:1,cc:3,ntc:1,mem:0})"><span class="choice-radio"></span><span class="choice-letter">D</span><span class="choice-text">Des prospects à identifier, convaincre et fidéliser — j'aime construire un portefeuille.</span><div class="choice-tags"><span class="ttag ttag-cc">CC</span></div></label>
+    </div>
+  </div>
+
+  <div class="q-card" id="qc3">
+    <div class="axe-label">🧩 Axe 1</div>
+    <div class="q-header"><div class="q-num">3</div><div class="q-text">Comment décrivez-vous votre rapport aux autres dans le travail ?</div></div>
+    <div class="q-formule">💬 <em>« Comment vos proches vous décriraient-ils dans une situation de travail en contact avec des gens ? »</em></div>
+    <div class="choices">
+      <label class="choice"><input type="radio" name="q3" value="A" onchange="pick(3,'A',{cv:3,cc:2,ntc:0,mem:1})"><span class="choice-radio"></span><span class="choice-letter">A</span><span class="choice-text">Empathique et à l'écoute — j'aime comprendre ce dont les gens ont besoin et les aider.</span><div class="choice-tags"><span class="ttag ttag-cv">CV</span><span class="ttag ttag-cc">CC</span></div></label>
+      <label class="choice"><input type="radio" name="q3" value="B" onchange="pick(3,'B',{cv:0,cc:3,ntc:2,mem:0})"><span class="choice-radio"></span><span class="choice-letter">B</span><span class="choice-text">Persuasif et persévérant — j'aime convaincre, je ne lâche pas facilement.</span><div class="choice-tags"><span class="ttag ttag-cc">CC</span><span class="ttag ttag-ntc">NTC</span></div></label>
+      <label class="choice"><input type="radio" name="q3" value="C" onchange="pick(3,'C',{cv:0,cc:1,ntc:3,mem:1})"><span class="choice-radio"></span><span class="choice-letter">C</span><span class="choice-text">Analytique et stratégique — j'aime comprendre les enjeux avant de proposer une solution.</span><div class="choice-tags"><span class="ttag ttag-ntc">NTC</span></div></label>
+      <label class="choice"><input type="radio" name="q3" value="D" onchange="pick(3,'D',{cv:1,cc:0,ntc:0,mem:3})"><span class="choice-radio"></span><span class="choice-letter">D</span><span class="choice-text">Organisateur et fédérateur — j'aime que les choses soient bien structurées et que chacun sache ce qu'il a à faire.</span><div class="choice-tags"><span class="ttag ttag-mem">MEM</span></div></label>
+    </div>
+  </div>
+
+  <div class="q-card" id="qc4">
+    <div class="axe-label">🧩 Axe 1</div>
+    <div class="q-header"><div class="q-num">4</div><div class="q-text">Si vous deviez choisir une image pour décrire votre rôle idéal, laquelle choisiriez-vous ?</div></div>
+    <div class="q-formule">💬 <em>« Parmi ces quatre images de rôle, laquelle vous parle le plus ? »</em></div>
+    <div class="choices">
+      <label class="choice"><input type="radio" name="q4" value="A" onchange="pick(4,'A',{cv:3,cc:0,ntc:0,mem:1})"><span class="choice-radio"></span><span class="choice-letter">A</span><span class="choice-text">🏪 Le vendeur expert : je connais mes produits sur le bout des doigts et je crée une vraie expérience en magasin.</span><div class="choice-tags"><span class="ttag ttag-cv">CV</span></div></label>
+      <label class="choice"><input type="radio" name="q4" value="B" onchange="pick(4,'B',{cv:0,cc:3,ntc:1,mem:0})"><span class="choice-radio"></span><span class="choice-letter">B</span><span class="choice-text">🎯 Le chasseur : je pars conquérir de nouveaux clients, je construis mon portefeuille pierre par pierre.</span><div class="choice-tags"><span class="ttag ttag-cc">CC</span></div></label>
+      <label class="choice"><input type="radio" name="q4" value="C" onchange="pick(4,'C',{cv:0,cc:1,ntc:3,mem:0})"><span class="choice-radio"></span><span class="choice-letter">C</span><span class="choice-text">🔧 Le consultant technique : j'analyse les besoins, je propose une solution sur mesure et je négocie sa mise en œuvre.</span><div class="choice-tags"><span class="ttag ttag-ntc">NTC</span></div></label>
+      <label class="choice"><input type="radio" name="q4" value="D" onchange="pick(4,'D',{cv:1,cc:0,ntc:0,mem:3})"><span class="choice-radio"></span><span class="choice-letter">D</span><span class="choice-text">🏆 Le chef d'équipe : je pilote, j'organise, j'évalue et je fais progresser les gens autour de moi.</span><div class="choice-tags"><span class="ttag ttag-mem">MEM</span></div></label>
+    </div>
+  </div>
+
+  <!-- ===== AXE 2 : RAPPORT AU CHIFFRE & À L'ANALYSE ===== -->
+  <div class="section-title">📊 Axe 2 — Rapport au chiffre & à l'analyse</div>
+
+  <div class="q-card" id="qc5">
+    <div class="axe-label">📊 Axe 2</div>
+    <div class="q-header"><div class="q-num">5</div><div class="q-text">Comment vous positionnez-vous par rapport aux indicateurs chiffrés et aux tableaux de bord ?</div></div>
+    <div class="q-formule">💬 <em>« Dans un travail commercial, les chiffres — CA, marges, taux de conversion — c'est quelque chose qui vous attire ou que vous subissez ? »</em></div>
+    <div class="choices">
+      <label class="choice"><input type="radio" name="q5" value="A" onchange="pick(5,'A',{cv:3,cc:2,ntc:0,mem:0})"><span class="choice-radio"></span><span class="choice-letter">A</span><span class="choice-text">Je suis à l'aise avec les objectifs de vente, je regarde mes résultats et j'adapte mon approche au quotidien.</span><div class="choice-tags"><span class="ttag ttag-cv">CV</span><span class="ttag ttag-cc">CC</span></div></label>
+      <label class="choice"><input type="radio" name="q5" value="B" onchange="pick(5,'B',{cv:0,cc:1,ntc:3,mem:1})"><span class="choice-radio"></span><span class="choice-letter">B</span><span class="choice-text">J'aime analyser les données commerciales en profondeur — rentabilité, pipeline, KPI — et construire des plans d'action.</span><div class="choice-tags"><span class="ttag ttag-ntc">NTC</span></div></label>
+      <label class="choice"><input type="radio" name="q5" value="C" onchange="pick(5,'C',{cv:0,cc:0,ntc:1,mem:3})"><span class="choice-radio"></span><span class="choice-letter">C</span><span class="choice-text">Je gère les indicateurs de performance d'un périmètre — chiffre d'affaires, marges, productivité de l'équipe.</span><div class="choice-tags"><span class="ttag ttag-mem">MEM</span></div></label>
+      <label class="choice"><input type="radio" name="q5" value="D" onchange="pick(5,'D',{cv:2,cc:2,ntc:0,mem:0})"><span class="choice-radio"></span><span class="choice-letter">D</span><span class="choice-text">Les chiffres ne sont pas mon point fort mais je sais m'y adapter quand c'est nécessaire.</span><div class="choice-tags"><span class="ttag ttag-cv">CV</span><span class="ttag ttag-cc">CC</span></div></label>
+    </div>
+  </div>
+
+  <div class="q-card" id="qc6">
+    <div class="axe-label">📊 Axe 2</div>
+    <div class="q-header"><div class="q-num">6</div><div class="q-text">Face à un problème commercial ou organisationnel, quelle est votre réaction instinctive ?</div></div>
+    <div class="q-formule">💬 <em>« Quand quelque chose ne va pas dans vos ventes ou dans votre organisation, qu'est-ce que vous faites spontanément ? »</em></div>
+    <div class="choices">
+      <label class="choice"><input type="radio" name="q6" value="A" onchange="pick(6,'A',{cv:3,cc:2,ntc:0,mem:0})"><span class="choice-radio"></span><span class="choice-letter">A</span><span class="choice-text">Je revois mon approche client — j'essaie de mieux comprendre leurs besoins pour adapter ma façon de vendre.</span><div class="choice-tags"><span class="ttag ttag-cv">CV</span><span class="ttag ttag-cc">CC</span></div></label>
+      <label class="choice"><input type="radio" name="q6" value="B" onchange="pick(6,'B',{cv:0,cc:1,ntc:3,mem:1})"><span class="choice-radio"></span><span class="choice-letter">B</span><span class="choice-text">J'analyse les données — je cherche où est le problème avant de proposer une solution structurée.</span><div class="choice-tags"><span class="ttag ttag-ntc">NTC</span></div></label>
+      <label class="choice"><input type="radio" name="q6" value="C" onchange="pick(6,'C',{cv:0,cc:0,ntc:0,mem:3})"><span class="choice-radio"></span><span class="choice-letter">C</span><span class="choice-text">Je réunis mon équipe — j'organise, je délègue, je pilote la remontée vers les objectifs.</span><div class="choice-tags"><span class="ttag ttag-mem">MEM</span></div></label>
+      <label class="choice"><input type="radio" name="q6" value="D" onchange="pick(6,'D',{cv:1,cc:3,ntc:1,mem:0})"><span class="choice-radio"></span><span class="choice-letter">D</span><span class="choice-text">Je passe en mode action — je relance, je prospecte, j'augmente les contacts pour compenser.</span><div class="choice-tags"><span class="ttag ttag-cc">CC</span></div></label>
+    </div>
+  </div>
+
+  <!-- ===== AXE 3 : POSTURE & AUTONOMIE ===== -->
+  <div class="section-title">🎯 Axe 3 — Posture & autonomie</div>
+
+  <div class="q-card" id="qc7">
+    <div class="axe-label">🎯 Axe 3</div>
+    <div class="q-header"><div class="q-num">7</div><div class="q-text">Quelle organisation de travail vous correspond le mieux ?</div></div>
+    <div class="q-formule">💬 <em>« Dans votre emploi idéal, comment s'organise votre journée — un cadre fixe ou beaucoup d'autonomie ? »</em></div>
+    <div class="choices">
+      <label class="choice"><input type="radio" name="q7" value="A" onchange="pick(7,'A',{cv:3,cc:0,ntc:0,mem:2})"><span class="choice-radio"></span><span class="choice-letter">A</span><span class="choice-text">Un cadre fixe avec des horaires définis — j'aime savoir où je suis et ce que j'ai à faire.</span><div class="choice-tags"><span class="ttag ttag-cv">CV</span></div></label>
+      <label class="choice"><input type="radio" name="q7" value="B" onchange="pick(7,'B',{cv:0,cc:3,ntc:2,mem:0})"><span class="choice-radio"></span><span class="choice-letter">B</span><span class="choice-text">Une grande autonomie dans mon organisation — je gère mon planning et mes déplacements moi-même.</span><div class="choice-tags"><span class="ttag ttag-cc">CC</span><span class="ttag ttag-ntc">NTC</span></div></label>
+      <label class="choice"><input type="radio" name="q7" value="C" onchange="pick(7,'C',{cv:0,cc:1,ntc:3,mem:1})"><span class="choice-radio"></span><span class="choice-letter">C</span><span class="choice-text">Une organisation par projets ou par affaires — je construis mon emploi du temps autour de mes dossiers clients.</span><div class="choice-tags"><span class="ttag ttag-ntc">NTC</span></div></label>
+      <label class="choice"><input type="radio" name="q7" value="D" onchange="pick(7,'D',{cv:1,cc:0,ntc:0,mem:3})"><span class="choice-radio"></span><span class="choice-letter">D</span><span class="choice-text">Une organisation multi-casquettes — je gère l'équipe, les fournisseurs, le CA et les imprévus en même temps.</span><div class="choice-tags"><span class="ttag ttag-mem">MEM</span></div></label>
+    </div>
+  </div>
+
+  <div class="q-card" id="qc8">
+    <div class="axe-label">🎯 Axe 3</div>
+    <div class="q-header"><div class="q-num">8</div><div class="q-text">Quel rôle préférez-vous avoir dans une équipe ?</div></div>
+    <div class="q-formule">💬 <em>« En groupe ou en équipe, quel est naturellement votre rôle — celui que vous prenez spontanément ? »</em></div>
+    <div class="choices">
+      <label class="choice"><input type="radio" name="q8" value="A" onchange="pick(8,'A',{cv:3,cc:2,ntc:0,mem:0})"><span class="choice-radio"></span><span class="choice-letter">A</span><span class="choice-text">Exécutant de qualité — je réalise ma part du travail avec sérieux et je suis fiable.</span><div class="choice-tags"><span class="ttag ttag-cv">CV</span></div></label>
+      <label class="choice"><input type="radio" name="q8" value="B" onchange="pick(8,'B',{cv:1,cc:3,ntc:1,mem:0})"><span class="choice-radio"></span><span class="choice-letter">B</span><span class="choice-text">Apporteur d'opportunités — je ramène des idées, des contacts, je suis toujours en veille.</span><div class="choice-tags"><span class="ttag ttag-cc">CC</span></div></label>
+      <label class="choice"><input type="radio" name="q8" value="C" onchange="pick(8,'C',{cv:0,cc:0,ntc:3,mem:1})"><span class="choice-radio"></span><span class="choice-letter">C</span><span class="choice-text">Expert de référence — on me consulte pour mon expertise technique ou sectorielle.</span><div class="choice-tags"><span class="ttag ttag-ntc">NTC</span></div></label>
+      <label class="choice"><input type="radio" name="q8" value="D" onchange="pick(8,'D',{cv:0,cc:0,ntc:0,mem:3})"><span class="choice-radio"></span><span class="choice-letter">D</span><span class="choice-text">Leader naturel — je prends les décisions, je coordonne, je motive et je rends des comptes.</span><div class="choice-tags"><span class="ttag ttag-mem">MEM</span></div></label>
+    </div>
+  </div>
+
+  <div class="q-card" id="qc9">
+    <div class="axe-label">🎯 Axe 3</div>
+    <div class="q-header"><div class="q-num">9</div><div class="q-text">Quel est votre rapport à la prise de risque dans le travail ?</div></div>
+    <div class="q-formule">💬 <em>« Prendre des initiatives, foncer sans garantie de résultat — comment vous situez-vous par rapport à ça ? »</em></div>
+    <div class="choices">
+      <label class="choice"><input type="radio" name="q9" value="A" onchange="pick(9,'A',{cv:3,cc:0,ntc:0,mem:1})"><span class="choice-radio"></span><span class="choice-letter">A</span><span class="choice-text">Je préfère un cadre sécurisant avec des procédures — je prends des risques calculés et balisés.</span><div class="choice-tags"><span class="ttag ttag-cv">CV</span></div></label>
+      <label class="choice"><input type="radio" name="q9" value="B" onchange="pick(9,'B',{cv:0,cc:3,ntc:1,mem:0})"><span class="choice-radio"></span><span class="choice-letter">B</span><span class="choice-text">J'aime prospecter l'inconnu — le risque du refus ne me déstabilise pas, ça fait partie du jeu.</span><div class="choice-tags"><span class="ttag ttag-cc">CC</span></div></label>
+      <label class="choice"><input type="radio" name="q9" value="C" onchange="pick(9,'C',{cv:0,cc:1,ntc:3,mem:0})"><span class="choice-radio"></span><span class="choice-letter">C</span><span class="choice-text">Je prends des risques mesurés après analyse — je ne fonce que si j'ai évalué les enjeux.</span><div class="choice-tags"><span class="ttag ttag-ntc">NTC</span></div></label>
+      <label class="choice"><input type="radio" name="q9" value="D" onchange="pick(9,'D',{cv:0,cc:0,ntc:1,mem:3})"><span class="choice-radio"></span><span class="choice-letter">D</span><span class="choice-text">Je gère le risque pour l'équipe — je prends des décisions difficiles et j'en assume les conséquences.</span><div class="choice-tags"><span class="ttag ttag-mem">MEM</span></div></label>
+    </div>
+  </div>
+
+  <!-- ===== AXE 4 : RAPPORT AU PRODUIT & AU SECTEUR ===== -->
+  <div class="section-title">🔍 Axe 4 — Rapport au produit & au secteur</div>
+
+  <div class="q-card" id="qc10">
+    <div class="axe-label">🔍 Axe 4</div>
+    <div class="q-header"><div class="q-num">10</div><div class="q-text">Quel type de produit ou service vous attire le plus pour travailler dessus ?</div></div>
+    <div class="q-formule">💬 <em>« Si vous imaginez ce que vous vendrez ou gérerez dans votre futur emploi, ça ressemble à quoi ? »</em></div>
+    <div class="choices">
+      <label class="choice"><input type="radio" name="q10" value="A" onchange="pick(10,'A',{cv:3,cc:1,ntc:0,mem:2})"><span class="choice-radio"></span><span class="choice-letter">A</span><span class="choice-text">Des produits de grande consommation ou de mode — vêtements, cosmétiques, alimentation, électronique grand public.</span><div class="choice-tags"><span class="ttag ttag-cv">CV</span></div></label>
+      <label class="choice"><input type="radio" name="q10" value="B" onchange="pick(10,'B',{cv:0,cc:3,ntc:0,mem:0})"><span class="choice-radio"></span><span class="choice-letter">B</span><span class="choice-text">Des services ou produits BtoC à valeur ajoutée — assurance, immobilier, téléphonie, énergie.</span><div class="choice-tags"><span class="ttag ttag-cc">CC</span></div></label>
+      <label class="choice"><input type="radio" name="q10" value="C" onchange="pick(10,'C',{cv:0,cc:0,ntc:3,mem:0})"><span class="choice-radio"></span><span class="choice-letter">C</span><span class="choice-text">Des solutions techniques ou industrielles — machines, logiciels, équipements professionnels, solutions BtoB.</span><div class="choice-tags"><span class="ttag ttag-ntc">NTC</span></div></label>
+      <label class="choice"><input type="radio" name="q10" value="D" onchange="pick(10,'D',{cv:1,cc:1,ntc:1,mem:3})"><span class="choice-radio"></span><span class="choice-letter">D</span><span class="choice-text">Peu importe le produit — ce qui m'intéresse c'est la gestion globale d'un point de vente ou d'un rayon.</span><div class="choice-tags"><span class="ttag ttag-mem">MEM</span></div></label>
+    </div>
+  </div>
+
+  <div class="q-card" id="qc11">
+    <div class="axe-label">🔍 Axe 4</div>
+    <div class="q-header"><div class="q-num">11</div><div class="q-text">Dans votre travail, quelle phase vous attire le plus ?</div></div>
+    <div class="q-formule">💬 <em>« Si on décompose l'acte commercial, quel est le moment qui vous enthousiasme le plus ? »</em></div>
+    <div class="choices">
+      <label class="choice"><input type="radio" name="q11" value="A" onchange="pick(11,'A',{cv:3,cc:0,ntc:0,mem:0})"><span class="choice-radio"></span><span class="choice-letter">A</span><span class="choice-text">L'accueil et le conseil — créer une vraie relation avec le client qui pousse la porte.</span><div class="choice-tags"><span class="ttag ttag-cv">CV</span></div></label>
+      <label class="choice"><input type="radio" name="q11" value="B" onchange="pick(11,'B',{cv:0,cc:3,ntc:1,mem:0})"><span class="choice-radio"></span><span class="choice-letter">B</span><span class="choice-text">La prospection et la prise de contact — trouver de nouveaux clients là où ils ne m'attendent pas.</span><div class="choice-tags"><span class="ttag ttag-cc">CC</span></div></label>
+      <label class="choice"><input type="radio" name="q11" value="C" onchange="pick(11,'C',{cv:0,cc:0,ntc:3,mem:0})"><span class="choice-radio"></span><span class="choice-letter">C</span><span class="choice-text">La négociation — construire une proposition sur mesure et défendre mes arguments face à l'acheteur.</span><div class="choice-tags"><span class="ttag ttag-ntc">NTC</span></div></label>
+      <label class="choice"><input type="radio" name="q11" value="D" onchange="pick(11,'D',{cv:0,cc:0,ntc:0,mem:3})"><span class="choice-radio"></span><span class="choice-letter">D</span><span class="choice-text">Le pilotage — analyser les résultats, ajuster les actions de l'équipe et optimiser les performances.</span><div class="choice-tags"><span class="ttag ttag-mem">MEM</span></div></label>
+    </div>
+  </div>
+
+  <div class="q-card" id="qc12">
+    <div class="axe-label">🔍 Axe 4</div>
+    <div class="q-header"><div class="q-num">12</div><div class="q-text">Comment envisagez-vous la dimension technique dans votre futur emploi ?</div></div>
+    <div class="q-formule">💬 <em>« Le fait de devoir comprendre et expliquer des aspects techniques d'un produit — c'est quelque chose qui vous attire, vous est indifférent, ou vous rebutait ? »</em></div>
+    <div class="choices">
+      <label class="choice"><input type="radio" name="q12" value="A" onchange="pick(12,'A',{cv:2,cc:2,ntc:0,mem:0})"><span class="choice-radio"></span><span class="choice-letter">A</span><span class="choice-text">Je préfère me concentrer sur la relation client — la technique c'est secondaire pour moi.</span><div class="choice-tags"><span class="ttag ttag-cv">CV</span><span class="ttag ttag-cc">CC</span></div></label>
+      <label class="choice"><input type="radio" name="q12" value="B" onchange="pick(12,'B',{cv:0,cc:0,ntc:3,mem:1})"><span class="choice-radio"></span><span class="choice-letter">B</span><span class="choice-text">J'adore ça — maîtriser un produit dans ses moindres détails techniques est un vrai avantage pour moi.</span><div class="choice-tags"><span class="ttag ttag-ntc">NTC</span></div></label>
+      <label class="choice"><input type="radio" name="q12" value="C" onchange="pick(12,'C',{cv:1,cc:1,ntc:1,mem:3})"><span class="choice-radio"></span><span class="choice-letter">C</span><span class="choice-text">Je dois en connaître assez pour encadrer mon équipe et faire le lien avec les fournisseurs.</span><div class="choice-tags"><span class="ttag ttag-mem">MEM</span></div></label>
+      <label class="choice"><input type="radio" name="q12" value="D" onchange="pick(12,'D',{cv:1,cc:2,ntc:2,mem:0})"><span class="choice-radio"></span><span class="choice-letter">D</span><span class="choice-text">C'est un aspect important — j'aime les produits complexes qui nécessitent une vraie expertise pour vendre.</span><div class="choice-tags"><span class="ttag ttag-cc">CC</span><span class="ttag ttag-ntc">NTC</span></div></label>
+    </div>
+  </div>
+
+  <!-- ===== AXE 5 : PROJET PROFESSIONNEL & MATURITÉ ===== -->
+  <div class="section-title">🚀 Axe 5 — Projet professionnel & maturité</div>
+
+  <div class="q-card" id="qc13">
+    <div class="axe-label">🚀 Axe 5</div>
+    <div class="q-header"><div class="q-num">13</div><div class="q-text">Quel poste ou métier visualisez-vous dans 2-3 ans ?</div></div>
+    <div class="q-formule">💬 <em>« Fermez les yeux — dans 3 ans, vous travaillez. Qu'est-ce que vous faites ? »</em></div>
+    <div class="choices">
+      <label class="choice"><input type="radio" name="q13" value="A" onchange="pick(13,'A',{cv:3,cc:0,ntc:0,mem:0})"><span class="choice-radio"></span><span class="choice-letter">A</span><span class="choice-text">Vendeur conseil, conseiller de vente, assistant commercial en boutique ou en grande surface.</span><div class="choice-tags"><span class="ttag ttag-cv">CV</span></div></label>
+      <label class="choice"><input type="radio" name="q13" value="B" onchange="pick(13,'B',{cv:0,cc:3,ntc:0,mem:0})"><span class="choice-radio"></span><span class="choice-letter">B</span><span class="choice-text">Commercial terrain, chargé de clientèle, attaché commercial ou responsable de secteur.</span><div class="choice-tags"><span class="ttag ttag-cc">CC</span></div></label>
+      <label class="choice"><input type="radio" name="q13" value="C" onchange="pick(13,'C',{cv:0,cc:0,ntc:3,mem:0})"><span class="choice-radio"></span><span class="choice-letter">C</span><span class="choice-text">Technico-commercial, ingénieur d'affaires, business developer ou chargé de comptes BtoB.</span><div class="choice-tags"><span class="ttag ttag-ntc">NTC</span></div></label>
+      <label class="choice"><input type="radio" name="q13" value="D" onchange="pick(13,'D',{cv:0,cc:0,ntc:0,mem:3})"><span class="choice-radio"></span><span class="choice-letter">D</span><span class="choice-text">Chef de rayon, responsable de magasin, manager de proximité ou directeur de point de vente.</span><div class="choice-tags"><span class="ttag ttag-mem">MEM</span></div></label>
+    </div>
+  </div>
+
+  <div class="q-card" id="qc14">
+    <div class="axe-label">🚀 Axe 5</div>
+    <div class="q-header"><div class="q-num">14</div><div class="q-text">Avez-vous déjà eu une expérience d'encadrement ou de coordination d'autres personnes ?</div></div>
+    <div class="q-formule">💬 <em>« Avez-vous déjà eu à encadrer, former ou coordonner d'autres personnes — même dans un cadre associatif, scolaire ou personnel ? »</em></div>
+    <div class="choices">
+      <label class="choice"><input type="radio" name="q14" value="A" onchange="pick(14,'A',{cv:2,cc:2,ntc:1,mem:0})"><span class="choice-radio"></span><span class="choice-letter">A</span><span class="choice-text">Non, jamais — je n'ai pas encore eu ce type de responsabilité.</span><div class="choice-tags"><span class="ttag ttag-cv">CV</span><span class="ttag ttag-cc">CC</span></div></label>
+      <label class="choice"><input type="radio" name="q14" value="B" onchange="pick(14,'B',{cv:1,cc:1,ntc:2,mem:2})"><span class="choice-radio"></span><span class="choice-letter">B</span><span class="choice-text">Ponctuellement — j'ai accompagné ou formé quelqu'un, animé un groupe ou coordonné un projet.</span><div class="choice-tags"><span class="ttag ttag-ntc">NTC</span><span class="ttag ttag-mem">MEM</span></div></label>
+      <label class="choice"><input type="radio" name="q14" value="C" onchange="pick(14,'C',{cv:0,cc:0,ntc:1,mem:3})"><span class="choice-radio"></span><span class="choice-letter">C</span><span class="choice-text">Oui, régulièrement — j'ai déjà managé une équipe ou eu des responsabilités de coordination importantes.</span><div class="choice-tags"><span class="ttag ttag-mem">MEM</span></div></label>
+    </div>
+    <div class="q-note"><label>📝 Préciser le contexte d'encadrement :</label><textarea id="note-q14" placeholder="Quel contexte, combien de personnes, combien de temps…"></textarea></div>
+  </div>
+
+  <div class="q-card" id="qc15">
+    <div class="axe-label">🚀 Axe 5</div>
+    <div class="q-header"><div class="q-num">15</div><div class="q-text">Quelle est votre expérience dans le commerce ou la vente ?</div></div>
+    <div class="q-formule">💬 <em>« Côté expérience commerciale, vous en êtes où — stage, emploi, alternance ? »</em></div>
+    <div class="choices">
+      <label class="choice"><input type="radio" name="q15" value="A" onchange="pick(15,'A',{cv:2,cc:1,ntc:0,mem:0})"><span class="choice-radio"></span><span class="choice-letter">A</span><span class="choice-text">Aucune expérience dans le commerce — c'est une nouvelle orientation pour moi.</span><div class="choice-tags"><span class="ttag ttag-cv">CV</span></div></label>
+      <label class="choice"><input type="radio" name="q15" value="B" onchange="pick(15,'B',{cv:3,cc:2,ntc:1,mem:1})"><span class="choice-radio"></span><span class="choice-letter">B</span><span class="choice-text">J'ai eu des expériences ponctuelles (caissier, vendeur saisonnier, stage de découverte).</span><div class="choice-tags"><span class="ttag ttag-cv">CV</span><span class="ttag ttag-cc">CC</span></div></label>
+      <label class="choice"><input type="radio" name="q15" value="C" onchange="pick(15,'C',{cv:2,cc:3,ntc:2,mem:2})"><span class="choice-radio"></span><span class="choice-letter">C</span><span class="choice-text">J'ai une vraie expérience commerciale — alternance, CDI, CDD dans la vente ou le commerce.</span><div class="choice-tags"><span class="ttag ttag-cc">CC</span><span class="ttag ttag-ntc">NTC</span><span class="ttag ttag-mem">MEM</span></div></label>
+    </div>
+    <div class="q-note"><label>📝 Détailler l'expérience commerciale :</label><textarea id="note-q15" placeholder="Secteur, poste, durée, responsabilités…"></textarea></div>
+  </div>
+
+  <div class="q-card" id="qc16">
+    <div class="axe-label">🚀 Axe 5</div>
+    <div class="q-header"><div class="q-num">16</div><div class="q-text">Quel est votre rapport à la mobilité et aux déplacements professionnels ?</div></div>
+    <div class="q-formule">💬 <em>« Travailler en dehors d'un lieu fixe, se déplacer chez des clients — c'est quelque chose qui vous attire ou qui vous pose problème ? »</em></div>
+    <div class="choices">
+      <label class="choice"><input type="radio" name="q16" value="A" onchange="pick(16,'A',{cv:3,cc:0,ntc:0,mem:2})"><span class="choice-radio"></span><span class="choice-letter">A</span><span class="choice-text">Je préfère un lieu de travail fixe — j'aime avoir mes repères et travailler dans un espace défini.</span><div class="choice-tags"><span class="ttag ttag-cv">CV</span></div></label>
+      <label class="choice"><input type="radio" name="q16" value="B" onchange="pick(16,'B',{cv:0,cc:3,ntc:2,mem:0})"><span class="choice-radio"></span><span class="choice-letter">B</span><span class="choice-text">J'aime me déplacer — le mouvement et la variété des lieux font partie de ce qui me motive.</span><div class="choice-tags"><span class="ttag ttag-cc">CC</span><span class="ttag ttag-ntc">NTC</span></div></label>
+      <label class="choice"><input type="radio" name="q16" value="C" onchange="pick(16,'C',{cv:1,cc:2,ntc:3,mem:1})"><span class="choice-radio"></span><span class="choice-letter">C</span><span class="choice-text">Je suis mobile mais de manière organisée — des déplacements ciblés chez des clients identifiés à l'avance.</span><div class="choice-tags"><span class="ttag ttag-ntc">NTC</span></div></label>
+    </div>
+  </div>
+
+  <!-- ===== AXE BONUS : CONTRAINTES & CAPACITÉS DE FORMATION ===== -->
+  <div class="section-title">📚 Axe 6 — Capacités & contraintes de formation</div>
+
+  <div class="q-card" id="qc17">
+    <div class="axe-label">📚 Axe 6</div>
+    <div class="q-header"><div class="q-num">17</div><div class="q-text">Comment vous situez-vous par rapport à l'écrit professionnel (rapports, comptes-rendus, emails) ?</div></div>
+    <div class="q-formule">💬 <em>« Rédiger un email pro, un compte-rendu de réunion, une proposition commerciale — c'est quelque chose que vous maîtrisez ? »</em></div>
+    <div class="choices">
+      <label class="choice"><input type="radio" name="q17" value="A" onchange="pick(17,'A',{cv:2,cc:1,ntc:0,mem:0})"><span class="choice-radio"></span><span class="choice-letter">A</span><span class="choice-text">J'ai des difficultés à l'écrit — c'est un axe de progression important pour moi.</span><div class="choice-tags"><span class="ttag ttag-cv">CV</span></div></label>
+      <label class="choice"><input type="radio" name="q17" value="B" onchange="pick(17,'B',{cv:2,cc:2,ntc:1,mem:1})"><span class="choice-radio"></span><span class="choice-letter">B</span><span class="choice-text">Je m'en sors correctement dans les situations courantes — pas de blocage mais pas d'excellence non plus.</span><div class="choice-tags"><span class="ttag ttag-cv">CV</span><span class="ttag ttag-cc">CC</span></div></label>
+      <label class="choice"><input type="radio" name="q17" value="C" onchange="pick(17,'C',{cv:0,cc:1,ntc:3,mem:2})"><span class="choice-radio"></span><span class="choice-letter">C</span><span class="choice-text">Je suis à l'aise à l'écrit — je rédige facilement et de manière professionnelle.</span><div class="choice-tags"><span class="ttag ttag-ntc">NTC</span><span class="ttag ttag-mem">MEM</span></div></label>
+    </div>
+  </div>
+
+  <div class="q-card" id="qc18">
+    <div class="axe-label">📚 Axe 6</div>
+    <div class="q-header"><div class="q-num">18</div><div class="q-text">Quel est votre rapport à l'apprentissage en autonomie et en distanciel ?</div></div>
+    <div class="q-formule">💬 <em>« Notre formation est à 80% en distanciel avec des séances de 3h30 en autonomie. Comment vous sentez-vous par rapport à ça ? »</em></div>
+    <div class="choices">
+      <label class="choice"><input type="radio" name="q18" value="A" onchange="pick(18,'A',{cv:1,cc:1,ntc:0,mem:0})"><span class="choice-radio"></span><span class="choice-letter">A</span><span class="choice-text">C'est un vrai défi pour moi — j'ai besoin de présence physique et de beaucoup d'encadrement.</span><div class="choice-tags"><span class="ttag ttag-cv">CV</span><span class="ttag ttag-cc">CC</span></div></label>
+      <label class="choice"><input type="radio" name="q18" value="B" onchange="pick(18,'B',{cv:2,cc:2,ntc:2,mem:2})"><span class="choice-radio"></span><span class="choice-letter">B</span><span class="choice-text">Ça me demande une organisation mais je suis capable de le faire si je suis bien guidé(e).</span><div class="choice-tags"><span class="ttag ttag-cv">CV</span><span class="ttag ttag-cc">CC</span><span class="ttag ttag-ntc">NTC</span><span class="ttag ttag-mem">MEM</span></div></label>
+      <label class="choice"><input type="radio" name="q18" value="C" onchange="pick(18,'C',{cv:1,cc:1,ntc:2,mem:2})"><span class="choice-radio"></span><span class="choice-letter">C</span><span class="choice-text">Aucun problème — je suis autonome, organisé(e) et à l'aise avec les outils numériques.</span><div class="choice-tags"><span class="ttag ttag-ntc">NTC</span><span class="ttag ttag-mem">MEM</span></div></label>
+    </div>
+    <div class="q-note"><label>📝 Contraintes spécifiques (emploi du temps, situation familiale, équipement numérique) :</label><textarea id="note-q18" placeholder="Mentionner tout ce qui pourrait impacter le suivi de la formation…"></textarea></div>
+  </div>
+
+  <div class="q-card" id="qc19">
+    <div class="axe-label">📚 Axe 6</div>
+    <div class="q-header"><div class="q-num">19</div><div class="q-text">Pourquoi avez-vous choisi My Partner School plutôt qu'une autre école ou formation ?</div></div>
+    <div class="q-formule">💬 <em>« Qu'est-ce qui vous a amené à nous contacter — vous avez fait des comparaisons, ou c'est la première démarche ? »</em></div>
+    <div class="choices">
+      <label class="choice"><input type="radio" name="q19" value="A" onchange="pick(19,'A',{cv:1,cc:1,ntc:0,mem:0})"><span class="choice-radio"></span><span class="choice-letter">A</span><span class="choice-text">C'est la première démarche — je cherche une alternance et MPS était dans les premiers résultats.</span><div class="choice-tags"><span class="ttag ttag-cv">CV</span><span class="ttag ttag-cc">CC</span></div></label>
+      <label class="choice"><input type="radio" name="q19" value="B" onchange="pick(19,'B',{cv:2,cc:2,ntc:2,mem:2})"><span class="choice-radio"></span><span class="choice-letter">B</span><span class="choice-text">J'ai comparé plusieurs CFA — MPS m'a convaincu(e) par son offre ou sa réputation.</span><div class="choice-tags"><span class="ttag ttag-cv">CV</span><span class="ttag ttag-cc">CC</span><span class="ttag ttag-ntc">NTC</span><span class="ttag ttag-mem">MEM</span></div></label>
+      <label class="choice"><input type="radio" name="q19" value="C" onchange="pick(19,'C',{cv:1,cc:1,ntc:2,mem:2})"><span class="choice-radio"></span><span class="choice-letter">C</span><span class="choice-text">Je suis venu(e) sur recommandation d'un ancien ou par bouche-à-oreille — j'avais une cible précise.</span><div class="choice-tags"><span class="ttag ttag-ntc">NTC</span><span class="ttag ttag-mem">MEM</span></div></label>
+    </div>
+    <div class="q-note"><label>📝 Source de la candidature / contexte :</label><textarea id="note-q19" placeholder="Réseaux sociaux, Parcoursup, recommandation, forum…"></textarea></div>
+  </div>
+
+  <div class="q-card" id="qc20">
+    <div class="axe-label">📚 Axe 6</div>
+    <div class="q-header"><div class="q-num">20</div><div class="q-text">Si vous deviez vous définir en un mot dans votre rapport au travail, lequel choisiriez-vous ?</div></div>
+    <div class="q-formule">💬 <em>« Un seul mot pour vous définir au travail — ne réfléchissez pas trop, le premier qui vient. »</em></div>
+    <div class="choices">
+      <label class="choice"><input type="radio" name="q20" value="A" onchange="pick(20,'A',{cv:3,cc:0,ntc:0,mem:0})"><span class="choice-radio"></span><span class="choice-letter">A</span><span class="choice-text">🤝 Serviable / Attentionné(e) — aider les gens est ma priorité.</span><div class="choice-tags"><span class="ttag ttag-cv">CV</span></div></label>
+      <label class="choice"><input type="radio" name="q20" value="B" onchange="pick(20,'B',{cv:0,cc:3,ntc:0,mem:0})"><span class="choice-radio"></span><span class="choice-letter">B</span><span class="choice-text">💪 Combatif(ve) / Déterminé(e) — je vais chercher le résultat coûte que coûte.</span><div class="choice-tags"><span class="ttag ttag-cc">CC</span></div></label>
+      <label class="choice"><input type="radio" name="q20" value="C" onchange="pick(20,'C',{cv:0,cc:0,ntc:3,mem:1})"><span class="choice-radio"></span><span class="choice-letter">C</span><span class="choice-text">🧠 Rigoureux(se) / Analytique — je réfléchis avant d'agir et je creuse les sujets.</span><div class="choice-tags"><span class="ttag ttag-ntc">NTC</span></div></label>
+      <label class="choice"><input type="radio" name="q20" value="D" onchange="pick(20,'D',{cv:0,cc:0,ntc:0,mem:3})"><span class="choice-radio"></span><span class="choice-letter">D</span><span class="choice-text">👑 Leader / Organisateur(trice) — je pilote, je structure, je fais avancer les choses.</span><div class="choice-tags"><span class="ttag ttag-mem">MEM</span></div></label>
+    </div>
+  </div>
+
+
+  <div class="q-card" id="qc21">
+    <div class="axe-label">📚 Axe 6</div>
+    <div class="q-header"><div class="q-num">21</div><div class="q-text">Comment utilisez-vous un ordinateur au quotidien — pas un smartphone, un vrai ordinateur ?</div></div>
+    <div class="q-formule">💬 <em>« Concrètement, dans votre vie quotidienne, est-ce que vous utilisez un ordinateur — portable ou fixe — et pour faire quoi ? »</em></div>
+    <div class="choices">
+      <label class="choice"><input type="radio" name="q21" value="A" onchange="pickNum(21,'A','rouge')"><span class="choice-radio"></span><span class="choice-letter">A</span><span class="choice-text">Très peu ou pas du tout — j'utilise surtout mon téléphone, l'ordinateur m'est peu familier.</span><div class="choice-tags"><span class="ttag" style="background:#fee2e2;color:#991b1b;">⚠️ Vigilance</span></div></label>
+      <label class="choice"><input type="radio" name="q21" value="B" onchange="pickNum(21,'B','orange')"><span class="choice-radio"></span><span class="choice-letter">B</span><span class="choice-text">Pour des usages simples — consulter des sites, lire des emails, regarder des vidéos. Les logiciels complexes me posent des problèmes.</span><div class="choice-tags"><span class="ttag" style="background:#fff7ed;color:#9a3412;">⚠️ À surveiller</span></div></label>
+      <label class="choice"><input type="radio" name="q21" value="C" onchange="pickNum(21,'C','jaune')"><span class="choice-radio"></span><span class="choice-letter">C</span><span class="choice-text">Pour des usages courants — traitement de texte, emails, recherches, partage de fichiers (Google Drive, Dropbox). Je me débrouille bien.</span><div class="choice-tags"><span class="ttag" style="background:#fefce8;color:#854d0e;">✅ Suffisant</span></div></label>
+      <label class="choice"><input type="radio" name="q21" value="D" onchange="pickNum(21,'D','vert')"><span class="choice-radio"></span><span class="choice-letter">D</span><span class="choice-text">Pour des usages avancés — tableurs, outils collaboratifs, plateformes en ligne, visioconférence. Je suis à l'aise sur ordinateur.</span><div class="choice-tags"><span class="ttag" style="background:#f0fdf4;color:#14532d;">✅ Autonome</span></div></label>
+    </div>
+    <div class="q-note"><label>📝 Préciser l'équipement disponible chez le candidat :</label><textarea id="note-q21" placeholder="📋 Points à vérifier :&#10;• Possède-t-il un ordinateur (portable ou fixe) ? Ou uniquement un smartphone/tablette ?&#10;• La connexion internet est-elle stable et suffisante pour une visioconférence (Zoom) ?&#10;• Dispose-t-il d'un espace de travail calme et dédié à la maison ?&#10;• A-t-il accès à un micro et une caméra fonctionnels ?&#10;• Est-il à l'aise avec l'ouverture d'un email avec pièce jointe, le téléchargement et la sauvegarde d'un fichier ?&#10;• A-t-il déjà utilisé Google Drive, OneDrive ou un outil de stockage en ligne ?"></textarea></div>
+  </div>
+
+
+  <div class="q-card" id="qc22">
+    <div class="axe-label">📚 Axe 6</div>
+    <div class="q-header"><div class="q-num">22</div><div class="q-text">Avez-vous des besoins particuliers en matière d'apprentissage ou de conditions de travail — qu'ils soient reconnus officiellement ou non ?</div></div>
+    <div class="q-formule">💬 <em>« Certaines personnes ont des façons de fonctionner particulières — difficultés de lecture, de concentration, de mémorisation, besoin de plus de temps, d'un environnement calme… Est-ce que quelque chose comme ça vous correspond, même si vous n'avez pas de papier officiel ? »</em></div>
+    <div style="background:var(--blue-light);border-radius:9px;padding:10px 14px;margin-bottom:14px;font-size:0.8rem;color:var(--blue-dark);">
+      ℹ️ <strong>Note pour l'interviewer :</strong> Poser cette question avec bienveillance et sans insistance. L'objectif n'est pas de diagnostiquer mais d'anticiper les adaptations utiles. Le candidat n'a aucune obligation de répondre. Si la réponse est oui, noter dans le champ libre sans chercher à qualifier.
+    </div>
+    <div class="choices">
+      <label class="choice"><input type="radio" name="q22" value="A" onchange="pickNum(22,'A','neutre')"><span class="choice-radio"></span><span class="choice-letter">A</span><span class="choice-text">Non, pas que je sache — je n'ai pas de difficultés particulières dans mes apprentissages.</span><div class="choice-tags"><span class="ttag" style="background:#f0fdf4;color:#14532d;">✅ RAS</span></div></label>
+      <label class="choice"><input type="radio" name="q22" value="B" onchange="pickNum(22,'B','adapt-leger')"><span class="choice-radio"></span><span class="choice-letter">B</span><span class="choice-text">Peut-être — j'ai parfois du mal à me concentrer longtemps, à lire des textes denses ou à m'organiser, mais je gère.</span><div class="choice-tags"><span class="ttag" style="background:#fff7ed;color:#9a3412;">🔶 À surveiller</span></div></label>
+      <label class="choice"><input type="radio" name="q22" value="C" onchange="pickNum(22,'C','adapt-confirme')"><span class="choice-radio"></span><span class="choice-letter">C</span><span class="choice-text">Oui — j'ai des difficultés identifiées (dyslexie, dyspraxie, TDAH ou autre) avec ou sans reconnaissance officielle (RQTH).</span><div class="choice-tags"><span class="ttag" style="background:#fee2e2;color:#991b1b;">⚠️ Adaptation nécessaire</span></div></label>
+      <label class="choice"><input type="radio" name="q22" value="D" onchange="pickNum(22,'D','pref-pas-repondre')"><span class="choice-radio"></span><span class="choice-letter">D</span><span class="choice-text">Je préfère ne pas répondre à cette question pour l'instant.</span><div class="choice-tags"><span class="ttag" style="background:#f1f5f9;color:#64748b;">— Sans réponse</span></div></label>
+    </div>
+    <div class="q-note">
+      <label>📝 Nature des besoins identifiés et adaptations envisagées (confidentiel) :</label>
+      <textarea id="note-q22" placeholder="📋 Si le candidat exprime des besoins, noter ici :&#10;• Type de difficulté évoquée (concentration, lecture, organisation, mémorisation, autre)&#10;• Contexte dans lequel la difficulté apparaît (écrit ? oral ? autonomie ? groupe ?)&#10;• Adaptations déjà mises en place par le passé et qui ont fonctionné&#10;• RQTH en cours ou souhaitée ? Suivi par un professionnel de santé ?&#10;• Adaptations à envisager pour la formation : délais, supports, suivi renforcé, outils numériques…&#10;• Volonté ou non du candidat d'être orienté vers le référent handicap MPS"></textarea>
+    </div>
+  </div>
+
+  <!-- SCORES EN DIRECT -->
+  <div id="live-scores-wrap">
+    <div class="section-title">📈 Scores en temps réel</div>
+    <div class="live-scores">
+      <div class="ls-item">
+        <div class="ls-label">CV</div>
+        <div class="ls-val" id="ls-cv">0</div>
+        <div class="ls-bar-wrap"><div class="ls-bar ls-bar-cv" id="lsb-cv" style="width:0%"></div></div>
+      </div>
+      <div class="ls-item">
+        <div class="ls-label">CC</div>
+        <div class="ls-val" id="ls-cc">0</div>
+        <div class="ls-bar-wrap"><div class="ls-bar ls-bar-cc" id="lsb-cc" style="width:0%"></div></div>
+      </div>
+      <div class="ls-item">
+        <div class="ls-label">NTC</div>
+        <div class="ls-val" id="ls-ntc">0</div>
+        <div class="ls-bar-wrap"><div class="ls-bar ls-bar-ntc" id="lsb-ntc" style="width:0%"></div></div>
+      </div>
+      <div class="ls-item">
+        <div class="ls-label">MEM</div>
+        <div class="ls-val" id="ls-mem">0</div>
+        <div class="ls-bar-wrap"><div class="ls-bar ls-bar-mem" id="lsb-mem" style="width:0%"></div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- RÉSULTATS -->
+  <div id="results-section" style="display:none;">
+    <div class="section-title">🎓 Résultats & recommandation</div>
+    <div class="result-section">
+      <div class="result-header">🏆 Orientation recommandée</div>
+      <div class="result-grid">
+        <div class="result-card rc-cv" id="rc-cv">
+          <div class="rc-label">Titre Professionnel · Niveau 4</div>
+          <div class="rc-titre">Conseiller de Vente</div>
+          <div class="rc-rncp">RNCP 37098</div>
+          <div class="rc-score" id="rcs-cv">0 <span style="font-size:.7rem;font-weight:400">pts</span></div>
+          <div class="rc-bar-wrap"><div class="rc-bar" id="rcb-cv" style="width:0%"></div></div>
+          <div class="rc-desc">Vente en point de vente, conseil client, merchandising, gestion des flux. Idéal pour les profils attirés par le retail et le contact direct avec les clients particuliers.</div>
+        </div>
+        <div class="result-card rc-cc" id="rc-cc">
+          <div class="rc-label">Titre Professionnel · Niveau 4</div>
+          <div class="rc-titre">Conseiller Commercial</div>
+          <div class="rc-rncp">RNCP 37717</div>
+          <div class="rc-score" id="rcs-cc">0 <span style="font-size:.7rem;font-weight:400">pts</span></div>
+          <div class="rc-bar-wrap"><div class="rc-bar" id="rcb-cc" style="width:0%"></div></div>
+          <div class="rc-desc">Prospection, développement de portefeuille client, vente BtoC avec mobilité. Pour les profils combatifs, mobiles, avec le goût de la conquête commerciale.</div>
+        </div>
+        <div class="result-card rc-ntc" id="rc-ntc">
+          <div class="rc-label">Titre Professionnel · Niveau 5</div>
+          <div class="rc-titre">Négociateur Technico-Commercial</div>
+          <div class="rc-rncp">RNCP 39063</div>
+          <div class="rc-score" id="rcs-ntc">0 <span style="font-size:.7rem;font-weight:400">pts</span></div>
+          <div class="rc-bar-wrap"><div class="rc-bar" id="rcb-ntc" style="width:0%"></div></div>
+          <div class="rc-desc">Négociation BtoB, propositions techniques, gestion de comptes complexes. Niveau 5 — profil analytique, rigoureux, à l'aise avec les enjeux techniques et stratégiques.</div>
+        </div>
+        <div class="result-card rc-mem" id="rc-mem">
+          <div class="rc-label">Titre Professionnel · Niveau 5</div>
+          <div class="rc-titre">Manager d'Établissement Marchand</div>
+          <div class="rc-rncp">RNCP 38676</div>
+          <div class="rc-score" id="rcs-mem">0 <span style="font-size:.7rem;font-weight:400">pts</span></div>
+          <div class="rc-bar-wrap"><div class="rc-bar" id="rcb-mem" style="width:0%"></div></div>
+          <div class="rc-desc">Management d'équipe, pilotage de la performance commerciale d'un périmètre. Niveau 5 — nécessite une maturité et une expérience d'encadrement ou une forte projection managériale.</div>
+        </div>
+      </div>
+
+      <div id="verdict-box" style="background:var(--blue-light);border:2px solid var(--blue-mid);border-radius:12px;padding:18px 20px;margin-bottom:16px;">
+        <div style="font-family:'Syne',sans-serif;font-weight:700;color:var(--blue-dark);margin-bottom:10px;font-size:1rem;">🎯 Verdict</div>
+        <div id="verdict-text" style="font-size:0.92rem;line-height:1.6;color:var(--dark);"></div>
+      </div>
+
+      <div class="alerts" id="alerts-box"></div>
+    </div>
+  </div>
+
+  <!-- SYNTHESE -->
+  <div class="card" id="synthese-section">
+    <div style="font-family:'Syne',sans-serif;font-size:0.95rem;font-weight:700;color:var(--blue-dark);margin-bottom:16px;">✅ Synthèse de l'entretien</div>
+
+    <div class="field" style="margin-bottom:16px;">
+      <label>Titre recommandé par l'interviewer (après lecture des résultats)</label>
+      <select id="f-titre">
+        <option value="">-- À compléter après lecture des scores --</option>
+        <option>CV — Conseiller de Vente</option>
+        <option>CC — Conseiller Commercial</option>
+        <option>NTC — Négociateur Technico-Commercial</option>
+        <option>MEM — Manager d'Établissement Marchand</option>
+        <option>En attente — profil à affiner</option>
+      </select>
+    </div>
+
+    <p style="font-size:0.8rem;font-weight:600;color:var(--gray);text-transform:uppercase;letter-spacing:.05em;margin-bottom:8px;">Suite de l'entretien</p>
+    <div class="suite-grid">
+      <label class="suite-label"><input type="checkbox" name="suite" value="inscription"> ✅ Dossier d'inscription lancé</label>
+      <label class="suite-label"><input type="checkbox" name="suite" value="recherche-entreprise"> 🔍 Accompagnement recherche entreprise</label>
+      <label class="suite-label"><input type="checkbox" name="suite" value="relance"> 🔔 Relance prévue</label>
+      <label class="suite-label"><input type="checkbox" name="suite" value="sans-suite"> ❌ Sans suite</label>
+    </div>
+
+    <div class="field" style="margin-top:16px;">
+      <label>📝 Observations de l'interviewer</label>
+      <textarea id="observations" style="width:100%;border:1.5px solid var(--gray-light);border-radius:8px;padding:10px 14px;font-family:'Inter',sans-serif;font-size:0.88rem;min-height:80px;outline:none;resize:vertical;transition:border-color .2s;" placeholder="Impression générale, points de vigilance, points forts du candidat, contexte particulier…" onfocus="this.style.borderColor='var(--blue)'" onblur="this.style.borderColor='var(--gray-light)'"></textarea>
+    </div>
+
+    <!-- SIGNATURES -->
+    <div class="sig-row">
+      <div class="sig-box">
+        <label>Signature du candidat</label>
+        <p><em>Je confirme avoir répondu librement à ces questions.</em></p>
+        <div class="sig-canvas-wrap" id="wrap-cand">
+          <canvas id="sig-cand"></canvas>
+          <div class="sig-ph" id="ph-cand">✍️ Signez ici</div>
+        </div>
+        <div class="sig-actions">
+          <button class="sig-btn" onclick="clrSig('cand')">🗑️ Effacer</button>
+          <label class="sig-btn" for="sf-cand">📎 Importer</label>
+          <input class="sig-file" type="file" id="sf-cand" accept="image/*" onchange="impSig(event,'cand')">
+        </div>
+        <div class="sig-date" id="sd-cand"></div>
+      </div>
+      <div class="sig-box">
+        <label>Visa de l'interviewer</label>
+        <p><em>Je certifie avoir conduit cet entretien de positionnement.</em></p>
+        <div class="sig-canvas-wrap" id="wrap-moh">
+          <canvas id="sig-moh"></canvas>
+          <div class="sig-ph" id="ph-moh">✍️ Signez ici</div>
+        </div>
+        <div class="sig-actions">
+          <button class="sig-btn" onclick="clrSig('moh')">🗑️ Effacer</button>
+          <label class="sig-btn" for="sf-moh">📎 Importer</label>
+          <input class="sig-file" type="file" id="sf-moh" accept="image/*" onchange="impSig(event,'moh')">
+        </div>
+        <div class="sig-date" id="sd-moh"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="doc-footer">Document confidentiel — My Partner School — CFA Titres Professionnels Commerce & Vente · Marseille · À conserver dans le dossier candidat.</div>
+</div>
+
+<!-- ACTION BAR -->
+<div class="action-bar">
+  <button class="btn btn-ghost" onclick="rstForm()">🔄 Nouveau candidat</button>
+  <button class="btn btn-secondary" onclick="expPDF()">🖨️ Exporter PDF</button>
+  <button class="btn btn-primary" onclick="expEmail()">📧 Envoyer par email</button>
+  <button class="btn btn-primary" onclick="envoyerVersRegistre()" style="background:#1F7A4D;">📊 Ajouter au registre</button>
+</div>
+
+<script>
+// ===== ÂGE AUTOMATIQUE =====
+function calculerAge() {
+  const ddnInput = document.getElementById('f-ddn');
+  const ageInput = document.getElementById('f-age');
+  if (!ddnInput.value) { ageInput.value = ''; return; }
+  const ddn = new Date(ddnInput.value);
+  const auj = new Date();
+  let age = auj.getFullYear() - ddn.getFullYear();
+  const m = auj.getMonth() - ddn.getMonth();
+  if (m < 0 || (m === 0 && auj.getDate() < ddn.getDate())) { age--; }
+  ageInput.value = age + ' ans';
+}
+
+// ===== SCORING ENGINE =====
+const MAX_SCORE = 60; // theoretical max per titre with 20 questions × max 3
+const S = { cv:0, cc:0, ntc:0, mem:0 };
+let answered = 0;
+const TOTAL_Q = 22;
+
+const DESCRIPTIONS = {
+  cv: 'Conseiller de Vente',
+  cc: 'Conseiller Commercial',
+  ntc: 'Négociateur Technico-Commercial',
+  mem: "Manager d'Établissement Marchand"
+};
+
+function pick(qNum, letter, points) {
+  // Subtract previous answer if exists
+  const prev = window._prev || {};
+  if (prev[qNum]) {
+    const p = prev[qNum];
+    S.cv -= p.cv; S.cc -= p.cc; S.ntc -= p.ntc; S.mem -= p.mem;
+    answered--;
+  } else {
+    // First time answering this question
+  }
+  S.cv += points.cv; S.cc += points.cc; S.ntc += points.ntc; S.mem += points.mem;
+  prev[qNum] = points;
+  window._prev = prev;
+  answered++;
+
+  // Mark card answered
+  const card = document.getElementById('qc' + qNum);
+  if (card) card.classList.add('answered');
+
+  updateUI();
+}
+
+function updateUI() {
+  const total = Math.max(S.cv, S.cc, S.ntc, S.mem, 1);
+  
+  // Live scores
+  ['cv','cc','ntc','mem'].forEach(t => {
+    document.getElementById('ls-' + t).textContent = S[t];
+    document.getElementById('lsb-' + t).style.width = Math.round((S[t]/total)*100) + '%';
+  });
+
+  // Progress
+  const pct = Math.round((answered/TOTAL_Q)*100);
+  document.getElementById('prog-bar').style.width = pct + '%';
+  document.getElementById('prog-label').textContent = answered + ' / ' + TOTAL_Q + ' questions répondues';
+
+  // Show results after 15+ answers
+  if (answered >= 15) {
+    showResults();
+  }
+}
+
+function showResults() {
+  document.getElementById('results-section').style.display = 'block';
+  
+  const scores = [{t:'cv',s:S.cv},{t:'cc',s:S.cc},{t:'ntc',s:S.ntc},{t:'mem',s:S.mem}];
+  scores.sort((a,b) => b.s - a.s);
+  const maxS = Math.max(scores[0].s, 1);
+
+  // Update result cards
+  ['cv','cc','ntc','mem'].forEach(t => {
+    document.getElementById('rcs-' + t).innerHTML = S[t] + ' <span style="font-size:.7rem;font-weight:400">pts</span>';
+    document.getElementById('rcb-' + t).style.width = Math.round((S[t]/maxS)*100) + '%';
+    document.getElementById('rc-' + t).classList.remove('active');
+  });
+
+  const principal = scores[0];
+  const secondaire = scores[1];
+  const diff = principal.s - secondaire.s;
+
+  // Highlight winner
+  document.getElementById('rc-' + principal.t).classList.add('active');
+
+  // Verdict
+  let verdict = '<strong>Titre principal :</strong> ' + DESCRIPTIONS[principal.t] + ' (' + principal.s + ' pts)<br>';
+  
+  if (diff <= 3) {
+    verdict += '<strong>Titre secondaire :</strong> ' + DESCRIPTIONS[secondaire.t] + ' (' + secondaire.s + ' pts) — écart très faible, les deux titres sont envisageables.<br>';
+  } else if (diff <= 7) {
+    verdict += '<strong>Titre secondaire compatible :</strong> ' + DESCRIPTIONS[secondaire.t] + ' (' + secondaire.s + ' pts).<br>';
+  } else {
+    verdict += 'Le profil est clairement orienté vers le titre principal. ' + DESCRIPTIONS[secondaire.t] + ' comme alternative possible (' + secondaire.s + ' pts).<br>';
+  }
+  
+  if (answered < TOTAL_Q) {
+    verdict += '<br><em style="color:var(--gray)">⚠️ Résultat provisoire — ' + (TOTAL_Q - answered) + ' question(s) encore sans réponse.</em>';
+  }
+
+  document.getElementById('verdict-text').innerHTML = verdict;
+
+  // Alerts
+  const alerts = [];
+
+  // Alerte NTC/MEM niveau 5 si peu d'expérience
+  if ((principal.t === 'ntc' || principal.t === 'mem') && S[principal.t] - scores[2].s <= 4) {
+    alerts.push({ type: "warn", msg: "⚠️ <strong>Niveau 5 avec profil peu différencié</strong> — Le candidat est orienté vers " + DESCRIPTIONS[principal.t] + " (Niveau 5) mais son profil est peu différencié. Vérifier la maturité, l'expérience et la motivation avant validation." });
+  }
+
+  if (principal.t === 'mem') {
+    const q14 = document.querySelector('input[name="q14"]:checked');
+    if (q14 && q14.value === 'A') {
+      alerts.push({ type: "warn", msg: "⚠️ <strong>MEM sans expérience d'encadrement</strong> — Le candidat est orienté MEM mais n'a aucune expérience d'encadrement déclarée. Ce n'est pas rédhibitoire mais mérite une discussion approfondie sur la projection managériale." });
+    }
+  }
+
+  if (principal.t === 'ntc') {
+    const q17 = document.querySelector('input[name="q17"]:checked');
+    if (q17 && q17.value === 'A') {
+      alerts.push({ type: "warn", msg: "⚠️ <strong>NTC avec difficultés à l'écrit</strong> — Le NTC requiert une forte maîtrise de l'écrit professionnel (propositions techniques, comptes-rendus). Accompagnement renforcé à prévoir sur cet axe." });
+    }
+  }
+
+  if (diff <= 2 && answered >= 18) {
+    alerts.push({ type: "info", msg: "ℹ️ <strong>Profil indécis</strong> — Écart de " + diff + " points entre les deux premiers titres. Un second entretien ou une mise en situation peut aider à affiner le choix." });
+  }
+
+  const q18 = document.querySelector('input[name="q18"]:checked');
+  if (q18 && q18.value === 'A') {
+    alerts.push({ type: "warn", msg: "⚠️ <strong>Autonomie distanciel faible</strong> — Le candidat exprime des difficultés avec l'apprentissage à distance. La formation MPS étant à 80% distanciel, ce point est un facteur de risque de décrochage à traiter en priorité." });
+  }
+
+  if (scores[0].s > 0 && diff >= 10) {
+    alerts.push({ type: "ok", msg: "✅ <strong>Profil bien différencié</strong> — Écart de " + diff + " points. L'orientation est claire et fiable." });
+  }
+
+
+  // Alerte numérique Q21
+  const q21 = document.querySelector('input[name="q21"]:checked');
+  if (q21) {
+    if (q21.value === 'A') {
+      alerts.push({ type: "warn", msg: "🖥️ <strong>ALERTE NUMÉRIQUE — Niveau rouge</strong> — Le candidat utilise très peu ou pas l'ordinateur. Risque élevé de blocage technique dès les premières séances distanciel (connexion LMS, téléchargement de documents, Zoom). <strong>Action obligatoire avant entrée en formation :</strong> vérifier l'équipement, prévoir un accompagnement numérique de base." });
+    } else if (q21.value === 'B') {
+      alerts.push({ type: "warn", msg: "🖥️ <strong>VIGILANCE NUMÉRIQUE — Niveau orange</strong> — Le candidat a des usages limités de l'ordinateur. Les plateformes LMS, Google Drive et les outils de visioconférence pourraient lui poser problème. Prévoir une session de prise en main des outils dès l'onboarding." });
+    } else if (q21.value === 'C') {
+      alerts.push({ type: "info", msg: "🖥️ <strong>Numérique suffisant</strong> — Le candidat maîtrise les usages courants. Un rappel rapide des outils MPS (LMS, Zoom, Drive) suffit lors de l'onboarding." });
+    }
+    // Niveau D : aucune alerte nécessaire
+  } else {
+    alerts.push({ type: "info", msg: "🖥️ <strong>Question numérique (Q21) non renseignée</strong> — Penser à poser cette question avant de finaliser l'entretien." });
+  }
+
+  // Alerte besoins d'adaptation Q22
+  const q22 = document.querySelector('input[name="q22"]:checked');
+  if (q22) {
+    if (q22.value === 'C') {
+      alerts.push({ type: "warn", msg: "♿ <strong>BESOINS D'ADAPTATION IDENTIFIÉS (Q22)</strong> — Le candidat a déclaré des difficultés spécifiques (troubles dys, TDAH ou autres). <strong>Actions à prévoir :</strong> (1) orienter vers le référent handicap MPS si existant, (2) anticiper les adaptations pédagogiques dès l'entrée en formation (supports adaptés, délais, suivi renforcé), (3) vérifier si une RQTH est en cours ou envisageable. Ces informations sont confidentielles — ne pas mentionner dans les documents partagés avec l'entreprise." });
+    } else if (q22.value === 'B') {
+      alerts.push({ type: "info", msg: "🔶 <strong>VIGILANCE ADAPTATION (Q22)</strong> — Le candidat signale des difficultés légères de concentration, organisation ou lecture sans les nommer formellement. Prévoir un suivi attentif dans les premières semaines et adapter les supports si nécessaire. Un point individuel à 1 mois est recommandé." });
+    } else if (q22.value === 'D') {
+      alerts.push({ type: "info", msg: "💬 <strong>Question d'adaptation (Q22) sans réponse</strong> — Le candidat a préféré ne pas répondre. À respecter. Possibilité de revenir sur ce point de manière informelle lors d'un suivi ultérieur si des difficultés apparaissent en formation." });
+    }
+    // Valeur A : RAS, aucune alerte
+  }
+
+  const alertsBox = document.getElementById('alerts-box');
+  alertsBox.innerHTML = '';
+  alerts.forEach(a => {
+    const div = document.createElement('div');
+    div.className = 'alert alert-' + a.type;
+    div.innerHTML = a.msg;
+    alertsBox.appendChild(div);
+  });
+}
+
+
+// Question numérique sans scoring titre — alerte uniquement
+const _numAlerts = {};
+function pickNum(qNum, letter, niveau) {
+  const prev = window._prev || {};
+  if (!prev['num_' + qNum]) {
+    answered++;
+  }
+  prev['num_' + qNum] = niveau;
+  window._prev = prev;
+  _numAlerts[qNum] = { letter, niveau };
+  const card = document.getElementById('qc' + qNum);
+  if (card) card.classList.add('answered');
+  updateUI();
+}
+
+// ===== SIGNATURE PAD =====
+const sigState = {};
+
+function initSig(id) {
+  const canvas = document.getElementById('sig-' + id);
+  const wrap = document.getElementById('wrap-' + id);
+  const ph = document.getElementById('ph-' + id);
+  const state = { drawing: false, empty: true, canvas, ctx: null };
+  sigState[id] = state;
+
+  function resize() {
+    const dpr = window.devicePixelRatio || 1;
+    const w = wrap.getBoundingClientRect().width;
+    canvas.width = w * dpr;
+    canvas.height = 100 * dpr;
+    const ctx = canvas.getContext('2d');
+    ctx.scale(dpr, dpr);
+    ctx.strokeStyle = '#0f172a'; ctx.lineWidth = 2;
+    ctx.lineCap = 'round'; ctx.lineJoin = 'round';
+    state.ctx = ctx;
+  }
+  resize();
+
+  function pos(e) {
+    const r = canvas.getBoundingClientRect();
+    const src = e.touches ? e.touches[0] : e;
+    return { x: src.clientX - r.left, y: src.clientY - r.top };
+  }
+  canvas.addEventListener('mousedown', e => { state.drawing = true; const p = pos(e); state.ctx.beginPath(); state.ctx.moveTo(p.x, p.y); });
+  canvas.addEventListener('mousemove', e => { if (!state.drawing) return; const p = pos(e); state.ctx.lineTo(p.x, p.y); state.ctx.stroke(); if (state.empty) { state.empty = false; ph.style.opacity = '0'; } });
+  canvas.addEventListener('mouseup', () => state.drawing = false);
+  canvas.addEventListener('mouseleave', () => state.drawing = false);
+  canvas.addEventListener('touchstart', e => { e.preventDefault(); state.drawing = true; const p = pos(e); state.ctx.beginPath(); state.ctx.moveTo(p.x, p.y); }, { passive: false });
+  canvas.addEventListener('touchmove', e => { e.preventDefault(); if (!state.drawing) return; const p = pos(e); state.ctx.lineTo(p.x, p.y); state.ctx.stroke(); if (state.empty) { state.empty = false; ph.style.opacity = '0'; } }, { passive: false });
+  canvas.addEventListener('touchend', () => state.drawing = false);
+}
+
+function clrSig(id) {
+  const s = sigState[id]; if (!s) return;
+  s.ctx.clearRect(0, 0, s.canvas.width, s.canvas.height);
+  s.empty = true;
+  document.getElementById('ph-' + id).style.opacity = '1';
+}
+
+function impSig(event, id) {
+  const file = event.target.files[0]; if (!file) return;
+  const reader = new FileReader();
+  reader.onload = e => {
+    const img = new Image();
+    img.onload = () => {
+      const s = sigState[id];
+      const w = s.canvas.getBoundingClientRect().width;
+      const h = 100;
+      const ratio = Math.min(w / img.width, h / img.height);
+      s.ctx.clearRect(0, 0, s.canvas.width, s.canvas.height);
+      s.ctx.drawImage(img, (w - img.width*ratio)/2, (h - img.height*ratio)/2, img.width*ratio, img.height*ratio);
+      s.empty = false;
+      document.getElementById('ph-' + id).style.opacity = '0';
+    };
+    img.src = e.target.result;
+  };
+  reader.readAsDataURL(file);
+  event.target.value = '';
+}
+
+// ===== PDF =====
+function expPDF() {
+  ['cand','moh'].forEach(id => {
+    const s = sigState[id];
+    const old = document.getElementById('sig-print-' + id);
+    if (old) old.remove();
+    if (s && !s.empty) {
+      const img = document.createElement('img');
+      img.id = 'sig-print-' + id;
+      img.src = s.canvas.toDataURL('image/png');
+      img.style.cssText = 'max-width:100%;max-height:90px;display:block;margin:4px auto;';
+      const wrap = document.getElementById('wrap-' + id);
+      wrap.parentNode.insertBefore(img, wrap.nextSibling);
+      wrap.style.display = 'none';
+    }
+  });
+  window.print();
+  setTimeout(() => {
+    ['cand','moh'].forEach(id => {
+      const img = document.getElementById('sig-print-' + id);
+      if (img) img.remove();
+      const wrap = document.getElementById('wrap-' + id);
+      if (wrap) wrap.style.display = '';
+    });
+  }, 2500);
+}
+
+// ===== EMAIL =====
+function expEmail() {
+  const nom = document.getElementById('f-nom').value || 'Candidat';
+  const date = document.getElementById('f-date').value ? new Date(document.getElementById('f-date').value).toLocaleDateString('fr-FR') : new Date().toLocaleDateString('fr-FR');
+  const email = document.getElementById('f-email').value;
+  const titre = document.getElementById('f-titre').value;
+  const obs = document.getElementById('observations').value;
+
+  const scores = [{t:'cv',s:S.cv},{t:'cc',s:S.cc},{t:'ntc',s:S.ntc},{t:'mem',s:S.mem}];
+  scores.sort((a,b) => b.s - a.s);
+
+  let body = "Bonjour,\n\nSuite à l'entretien de positionnement du " + date + " avec " + nom + ", voici le résumé :\n\n";
+  body += "SCORES\n";
+  scores.forEach(s => body += DESCRIPTIONS[s.t] + " : " + s.s + " pts\n");
+  body += "\nTITRE RECOMMANDÉ : " + (titre || scores[0].t.toUpperCase()) + "\n";
+  if (obs) body += "\nOBSERVATIONS : " + obs + "\n";
+  body += "\n⚠️ Joindre le PDF exporté avant envoi.\n\nCordialement,\nMy Partner School";
+
+  const ok = confirm("📄 Voulez-vous d'abord exporter le PDF ? Cliquez OK pour ouvrir l'impression, puis Annuler pour passer à l'email directement.");
+  if (ok) { expPDF(); setTimeout(() => openMail(email, nom, date, body), 2500); }
+  else openMail(email, nom, date, body);
+}
+
+// ===== REGISTRE GOOGLE SHEETS =====
+// ⚠️ À remplacer après déploiement du Google Apps Script (voir instructions fournies séparément)
+const REGISTRE_WEBAPP_URL = "https://script.google.com/macros/s/AKfycbwsd3Rd92xCJG6T9NMRQ__66u0D_ViYolyn6XDkQgMYCuNcO323pegGXeXuc-d6jRVvew/exec";
+
+function txt(id) {
+  const el = document.getElementById(id);
+  if (!el) return '';
+  if (el.tagName === 'SELECT') return el.options[el.selectedIndex] ? el.options[el.selectedIndex].text.replace(/\s*\(\d\)$/, '') : '';
+  return el.value || '';
+}
+function radioVal(name, ifOui, ifNon) {
+  const el = document.querySelector('input[name="' + name + '"]:checked');
+  return (el && el.value === 'oui') ? ifOui : ifNon;
+}
+function dateFr(id) {
+  const el = document.getElementById(id);
+  if (!el || !el.value) return '';
+  return new Date(el.value).toLocaleDateString('fr-FR');
+}
+
+function envoyerVersRegistre() {
+  const contratIdentifie = document.getElementById('toggle-employeur').checked;
+  const rempliParEl = document.querySelector('input[name="rempli-par"]:checked');
+
+  const payload = {
+    "Nom de naissance": txt('f-nom-naissance'),
+    "Prénom": txt('f-prenom'),
+    "Date de naissance": dateFr('f-ddn'),
+    "Âge": txt('f-age'),
+    "Sexe": txt('f-sexe'),
+    "NIR": txt('f-nir'),
+    "Nationalité": txt('f-nationalite'),
+    "RQTH": radioVal('rqth', 'Oui', 'Non'),
+    "Sportif haut niveau": radioVal('shn', 'Oui', 'Non'),
+    "Nom et prénom": txt('f-rl-nom'),
+    "Lien de parenté": txt('f-rl-lien'),
+    "Adresse représentant légal": txt('f-rl-adresse'),
+    "CP/Ville représentant légal": txt('f-rl-cp-ville'),
+    "Email représentant légal": txt('f-rl-email'),
+    "Téléphone": txt('f-tel'),
+    "Email": txt('f-email'),
+    "Adresse": txt('f-adresse'),
+    "CP": txt('f-cp'),
+    "Ville": txt('f-ville'),
+    "Titre visé": txt('f-titre-vise').split(' — ')[0],
+    "Entrée en formation souhaitée": txt('f-entree'),
+    "Date début formation CFA": dateFr('f-formation-debut-cfa'),
+    "Besoin ordinateur (1er équipement OPCO)": radioVal('besoin-ordi', 'Oui', 'Non'),
+    "Diplôme le plus élevé obtenu": txt('f-diplome-obtenu'),
+    "Situation avant contrat": txt('f-situation-avant'),
+    "Date du positionnement": dateFr('f-date'),
+    "Rempli par": (rempliParEl && rempliParEl.value === 'conseillere') ? 'La conseillère' : 'Le candidat',
+    "Interviewer": txt('f-conseiller'),
+    "Score CV": S.cv, "Score CC": S.cc, "Score NTC": S.ntc, "Score MEM": S.mem,
+    "Titre recommandé": txt('f-titre'),
+    "Contrat identifié": contratIdentifie ? 'Oui' : 'Non',
+    "Statut dossier": contratIdentifie ? 'Contrat signé' : 'Positionné',
+    "Observations": txt('observations')
+  };
+
+  if (contratIdentifie) {
+    payload["Date début en entreprise"] = dateFr('f-formation-debut-entreprise');
+    payload["Raison sociale"] = txt('f-emp-nom');
+    payload["SIRET"] = txt('f-emp-siret');
+    payload["Code NAF"] = txt('f-emp-naf');
+    payload["Effectif"] = txt('f-emp-effectif');
+    payload["Type employeur"] = document.getElementById('f-emp-type').value === 'public' ? 'Public' : 'Privé';
+    payload["Code IDCC"] = txt('f-emp-idcc');
+    payload["Adresse employeur"] = txt('f-emp-adresse');
+    payload["CP / Ville employeur"] = txt('f-emp-cp-ville');
+    payload["Téléphone employeur"] = txt('f-emp-tel');
+    payload["Email employeur"] = txt('f-emp-email');
+    payload["Nom du MDA"] = txt('f-mda-nom');
+    payload["Emploi occupé (MDA)"] = txt('f-mda-emploi');
+    payload["Email du MDA"] = txt('f-mda-email');
+    payload["Date de naissance MDA"] = dateFr('f-mda-ddn');
+    payload["Diplôme du MDA"] = txt('f-mda-diplome');
+    payload["Diplôme MDA — code"] = txt('f-mda-diplome-code');
+    payload["Niveau diplôme MDA"] = txt('f-mda-diplome-niveau');
+  }
+
+  if (REGISTRE_WEBAPP_URL.indexOf('COLLER_ICI') !== -1) {
+    alert("⚠️ L'URL du registre n'est pas encore configurée (voir REGISTRE_WEBAPP_URL en haut du script).");
+    return;
+  }
+
+  fetch(REGISTRE_WEBAPP_URL, {
+    method: 'POST',
+    headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+    body: JSON.stringify(payload)
+  }).then(r => r.json()).then(res => {
+    if (res.status === 'ok') alert('✅ Ajouté au registre (ligne ' + res.row + ')');
+    else alert('⚠️ Erreur registre : ' + res.message);
+  }).catch(err => alert('⚠️ Échec de connexion au registre : ' + err));
+}
+
+function openMail(email, nom, date, body) {
+  const sub = encodeURIComponent("Positionnement MPS — " + nom + " — " + date);
+  window.open("mailto:" + encodeURIComponent(email || '') + "?subject=" + sub + "&body=" + encodeURIComponent(body));
+}
+
+// ===== RESET =====
+function rstForm() {
+  if (!confirm('Réinitialiser pour un nouveau candidat ?')) return;
+  document.querySelectorAll('input[type=radio]').forEach(r => r.checked = false);
+  document.querySelectorAll('input[type=checkbox]').forEach(c => c.checked = false);
+  document.querySelectorAll('input[type=text],input[type=email],input[type=tel],input[type=number],textarea,select').forEach(i => { i.value = ''; });
+  document.querySelectorAll('.q-card').forEach(c => c.classList.remove('answered'));
+  S.cv = 0; S.cc = 0; S.ntc = 0; S.mem = 0;
+  answered = 0; window._prev = {};
+  ['cv','cc','ntc','mem'].forEach(t => {
+    document.getElementById('ls-' + t).textContent = '0';
+    document.getElementById('lsb-' + t).style.width = '0%';
+  });
+  document.getElementById('prog-bar').style.width = '0%';
+  document.getElementById('prog-label').textContent = '0 / 20 questions répondues';
+  document.getElementById('results-section').style.display = 'none';
+  document.getElementById('f-date').value = new Date().toISOString().split('T')[0];
+  clrSig('cand'); clrSig('moh');
+}
+
+
+function toggleBloc(id, show) {
+  document.getElementById(id).style.display = show ? 'block' : 'none';
+  document.getElementById(id + '-vide').style.display = show ? 'none' : 'block';
+}
+
+// ===== INIT =====
+window.addEventListener('load', () => {
+  document.getElementById('f-date').value = new Date().toISOString().split('T')[0];
+  const today = new Date().toLocaleDateString('fr-FR');
+  document.getElementById('sd-cand').textContent = 'Date : ' + today;
+  document.getElementById('sd-moh').textContent = 'Date : ' + today;
+  initSig('cand'); initSig('moh');
+});
+</script>
+</body>
+</html>
