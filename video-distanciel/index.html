@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Partner School — Venez suivre votre cours au centre</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background: linear-gradient(180deg, #0d3f66 0%, #115a91 60%, #1a7bc4 100%);
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+  }
+  .wrap {
+    width: 100%;
+    max-width: 880px;
+    background: #ffffff;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.35);
+  }
+  .header {
+    background: #115a91;
+    padding: 20px 28px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .header img { height: 40px; display:block; border-radius: 8px; }
+  .header h1 {
+    color: #fff;
+    font-size: 18px;
+    margin: 0;
+    font-weight: bold;
+  }
+  video {
+    width: 100%;
+    display: block;
+    background: #000;
+  }
+  .footer {
+    padding: 18px 28px 26px 28px;
+    color: #2a3b4a;
+  }
+  .footer p { margin: 0 0 8px 0; line-height: 1.5; }
+  .footer a {
+    color: #1a7bc4;
+    font-weight: bold;
+    text-decoration: none;
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="header">
+      <img src="data:image/jpeg;base64,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" alt="My Partner School">
+      <h1>Venez suivre votre cours au centre</h1>
+    </div>
+    <video controls playsinline poster="thumb_play.jpg">
+      <source src="player_video.mp4" type="video/mp4">
+      Votre navigateur ne supporte pas la lecture vidéo. Vous pouvez <a href="player_video.mp4">télécharger la vidéo</a>.
+    </video>
+    <div class="footer">
+      <p>Un souci de connexion, de micro ou de calme pour suivre votre cours à distance ? My Partner School vous accueille au centre.</p>
+      <p>📧 <a href="mailto:contact@mypartner-school.fr">contact@mypartner-school.fr</a> — ou le canal Slack de votre promotion.</p>
+    </div>
+  </div>
+</body>
+</html>
